@@ -177,6 +177,12 @@ img {
 			right: -42px;
 		}
 	}
+
+	@media screen and (max-width: 1366px) {
+		&__illustration {
+			max-width: 480px;
+		}
+	}
 }
 
 //FEATURES
