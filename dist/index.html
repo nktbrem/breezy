@@ -1,356 +1,537 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta
-			name="viewport"
-			content="initial-scale=1.0, width=device-width, maximum-scale=1.0, viewport-fit=cover"
-		/>
-		<title>Main Page</title>
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="author" content="" />
-		<meta name="designer" content="" />
-		<meta name="HandheldFriendly" content="True" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, viewport-fit=cover" />
+    <title>Main Page</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="designer" content="" />
+    <meta name="HandheldFriendly" content="True" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="icon" type="image/x-icon" href="../../img/faviconV2.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../../img/faviconV2.png" />
 
-		<link rel="stylesheet" href="libs/select2/select2.css" />
-		<link rel="stylesheet" href="css/style.bundle.css" />
-	</head>
-	<body class="site dark">
+    <link rel="stylesheet" href="libs/select2/select2.css" />
+    <link rel="stylesheet" href="css/style.bundle.css" />
+  </head>
+  <body class="site dark">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__content">
+          <a class="header__logo" href="#">
+            <img src="../../img/logo.svg" alt="Breezy reuse easy logo" />
+          </a>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link menu__link-active">Refurbished</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Where to buy</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Contacts</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Warranty</a>
+              </li>
+            </ul>
+          </nav>
 
-<header class="header">
-    <div class="header__container">
-        <div class="header__inner">
-            <a class="header__logo" href="#">
-                <img class="header__logo-img" src="../../img/logo.svg" alt="Breezy reuse easy logo">
-            </a>
-            <nav class="header__menu">
-                <ul class="header__menu-list">
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Refurbished</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Where to buy</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Contacts</a>
-                    </li>
-                    <li class="header__menu-item">
-                        <a href="#" class="header__menu-link">Warranty</a>
-                    </li>
-                </ul>
-            </nav>
+          <div class="header__buttons buttons">
+            <button class="buttons__lang">
+              <img src="../../img/globe.svg" alt="language selection button" />
+            </button>
 
-
-            <div class="header__buttons">
-                <button class="header__lang-menu">
-                    <img class="header__lang" src="../../img/globe.svg" alt="language selection button">
-                </button>
-
-                <a href="" class="header__contact-button">Get in touch</a>
-            </div>
+            <button id="header-btn" class="buttons__contact">Get in touch</button>
+          </div>
         </div>
-    </div>
-</header>
+      </div>
+    </header>
 
-<section class="hero">
-    <div class="hero__container">
-        <h1 class="hero__title">Встречай новое поколение Refurbished</h1>
-        <p class="hero__description">Каждый из наших iPhone перерабатывается с использованием уникального процесса, что
-            обеспечивает непревзойденную ценность, качество и эстетику. </p>
-        <a href="" class="button">Where to buy</a>
-    </div>
-</section>
-<section class="features">
-    <div class="features__container">
-        <ul class="features__list">
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">Встречай новое поколение Refurbished</h1>
+          <p class="hero__description">
+            Каждый из наших iPhone перерабатывается с использованием уникального процесса, что обеспечивает
+            непревзойденную ценность, качество и эстетику.
+          </p>
+          <a href="" class="hero__button">Where to buy</a>
+          <!--            <div class="hero__img">-->
+          <!--                <img src="../../img/hero-1.png" alt="Hero image">-->
+          <!--            </div>-->
+          <!--            <div>-->
+          <!--                <div class="hero__feature feature">-->
+          <!--                    <div class="feature__img">-->
+          <!--                        <img src="../../img/medal.svg" alt="">-->
+          <!--                    </div>-->
+
+          <!--                    <p class="feature__description">На 100% готов к использованию</p>-->
+          <!--                </div>-->
+          <!--                <div class="hero__feature feature">-->
+          <!--                    <div class="feature__img">-->
+          <!--                        <img src="../../img/medal.svg" alt="">-->
+          <!--                    </div>-->
+          <!--                    <p class="feature__description">Премиум качество в каждой детали</p>-->
+          <!--                </div>-->
+          <!--                <div class="hero__feature feature">-->
+          <!--                    <div class="feature__img">-->
+          <!--                        <img src="../../img/checklist.svg" alt="">-->
+          <!--                    </div>-->
+          <!--                    <p class="feature__description">Качественный MFI кабель в комплекте</p>-->
+          <!--                </div>-->
+          <!--                <div class="hero__feature feature">-->
+          <!--                    <div class="feature__img">-->
+          <!--                        <img src="../../img/checklist.svg" alt="">-->
+          <!--                    </div>-->
+          <!--                    <p class="feature__description">Гарантия качества и положительных эмоций</p>-->
+          <!--                </div>-->
+          <!--            </div>-->
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="features__container">
+        <div class="features__content">
+          <ul class="features__list">
             <li class="features__item">
-                <img src="../../img/medal.svg" alt="">
-                <h3 class="features__title">Premium Quality</h3>
-                <p class="features__description">Device, accessories and battery are fully covered, plus an extra Free
-                    Pick-Up and Return Service.</p>
+              <div class="features__img">
+                <img src="../../img/medal.svg" alt="" />
+              </div>
+              <p class="features__title">Premium Quality</p>
+              <p class="features__description">
+                Device, accessories and battery are fully covered, plus an extra Free Pick-Up and Return Service.
+              </p>
             </li>
             <li class="features__item">
-                <img src="../../img/settings.svg" alt="">
-                <h3 class="features__title">100% Original Parts</h3>
-                <p class="features__description">No risks, no fake parts. Our product portfolio complies with
-                    manufacturer standards.</p>
+              <div class="features__img">
+                <img src="../../img/settings.svg" alt="" />
+              </div>
+              <p class="features__title">100% Original Parts</p>
+              <p class="features__description">
+                No risks, no fake parts. Our product portfolio complies with manufacturer standards.
+              </p>
             </li>
             <li class="features__item">
-                <img src="../../img/check.svg" alt="">
-                <h3 class="features__title">Strictest Control</h3>
-                <p class="features__description">Our devices are living their second life, while still having their best
-                    quality inside and outside.</p>
+              <div class="features__img">
+                <img src="../../img/check.svg" alt="" />
+              </div>
+              <p class="features__title">Strictest Control</p>
+              <p class="features__description">
+                Our devices are living their second life, while still having their best quality inside and outside.
+              </p>
             </li>
-        </ul>
-    </div>
-</section>
-<section class="process">
-    <h2 class="title process__title">Продлеваем жизнь гаджетов</h2>
-    <p class="subtitle process__subtitle">Смотри как мы продлеваем жизнь гаджетов и формируем позитивный опыт их
-        использования</p>
-    <div class="process__video">
-        <img class="process__video-thumbnail" src="../../img/thumbnail.png" alt="">
-        <button class="process__play-button">
-            <img src="../../img/play.svg" alt="">
-        </button>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player"
-                frameborder="0"
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="process__container">
+        <div class="process__content">
+          <p class="process__title">Продлеваем жизнь гаджетов</p>
+          <p class="process__description">
+            Смотри как мы продлеваем жизнь гаджетов и формируем позитивный опыт их использования
+          </p>
+          <div class="process__video video">
+            <div class="video__container">
+              <iframe
+                class="video__iframe"
+                src="https://www.youtube.com/embed/jfKfPfyJRdk"
+                title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-    </div>
-</section>
-<section class="buy-smart">
-    <div class="buy-smart__container">
-        <h2 class="title buy-smart__title">Покупай разумнее</h2>
-        <p class="subtitle buy-smart__subtitle">Покупая устройство Breezy Refurbished ты делаешь разумный выбор и
-            платишь
-            справедливую цену, твоё устройство почти не отличается от нового, но при этом гораздо выгоднее.</p>
-        <img src="../../img/set.png" alt="">
-        <!--  ADD 3 BULLETS  -->
-    </div>
-</section>
-<section class="quality">
-    <div class="quality__container">
-        <h2 class="title quality__title">Чувствуй качество</h2>
-        <p class="description quality__description">Мы оцениваем техническое и визуальное состояние, историю устройства.
-            Каждое устройство Breezy Refurbished проходит до 55-ти тестов на профильном программном обеспечении, которое
-            невозможно обмануть. Тщательно дезинфицируем и упаковываем гаджеты. На все устройства Breezy Refurbished
-            предоставляется гарантия качества!</p>
-        <p class="bullet quality__bullet">До 2 лет гарантии</p>
-        <p class="bullet quality__bullet">55 параметров проверки</p>
-    </div>
-</section>
-<section class="emotions">
-    <div class="emotions__container">
-        <h2 class="title emotions__title">Получай эмоции</h2>
-        <p class="description emotions__description">Радуйся вместе с нами! Ты не только получаешь устройство выгоднее и
-            с супер-гарантией, самое главное — эмоции, как при покупке нового! Дополнительно к каждому устройству идут
-            фирменные стикеры, для твоего яркого настроения.</p>
-    </div>
-</section>
-<section class="save-planet">
-    <div class="save-planet__container">
-        <h2 class="title save-planet__title">Береги планету</h2>
-        <p class="description save-planet__description">Забота об окружающей среде стоит на повестке дня уже у многих
-            крупных брендов. Но ответственность за сохранение окружающей среды несет каждый. Поэтому, каждый «реюзаный»
-            гаджет — это вклад в общее дело. Ты минимизируешь выбросы в атмосферу, тем самым спасаешь планету!</p>
-        <img src="../../img/save-planet.png" alt="">
-        <ul class="save-planet__list">
-            <li class="save-planet__item">
-                <p class="save-planet__item-title">100<span class="save-planet__item-title--accent">%</span></p>
-                <p class="save-planet__item-description">Экологическая упаковка</p>
-            </li>
-            <li class="save-planet__item">
-                <p class="save-planet__item-title">-70<span class="save-planet__item-title--accent">kg</span></p>
-                <p class="save-planet__item-description">Выбросы CO2</p>
-            </li>
-            <li class="save-planet__item">
-                <p class="save-planet__item-title">-100<span class="save-planet__item-title--accent">l</span></p>
-                <p class="save-planet__item-description">Расход воды</p>
-            </li>
-            <li class="save-planet__item">
-                <p class="save-planet__item-title">-137<span class="save-planet__item-title--accent">kg</span></p>
-                <p class="save-planet__item-description">Расход сырья</p>
-            </li>
-        </ul>
-    </div>
-</section>
-<section class="locations">
-    <div class="locations__container">
-        <h2 class="title locations__title">Береги планету</h2>
-        <p class="description locations__description">The following resellers discovered Breezy! The best choice for
-            Pre-Owned devices and the amount is still growing!</p>
-    </div>
-    <!--    BUTTONS-->
+                allowfullscreen
+              ></iframe>
+              <div class="video__thumbnail">
+                <img src="../../img/thumbnail.png" alt="" />
+              </div>
+              <button class="video__button">
+                <img src="../../img/play.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="locations__reseller">
-        <h3 class="locations__reseller-title">Do you want to become our next reseller?</h3>
-        <a href="" class="button locations__reseller-button">Become a reseller</a>
-    </div>
-</section>
-<section class="about-us">
-    <div class="about-us__container">
-        <h2 class="title about-us__title">Who We Are</h2>
-        <p class="description about-us__description">Breezy – часть международного холдинга <span
-                class="about-us__description--accent">ASBIS</span>, дистрибьютора IT-продуктов в более чем 75 странах по
-            всему миру. Наша миссия – быть тем самым хорошим знакомым, который создает лучшие условия для обмена и
-            покупки гаджетов, давая им вторую жизнь.</p>
-        <div class="about-us__social">
-            <a href="" class="about-us__social-link">
-                <img src="../../img/fb.svg" alt="">
-            </a>
-            <a href="" class="about-us__social-link">
-                <img src="../../img/twitter.svg" alt="">
-            </a>
-            <a href="" class="about-us__social-link">
-                <img src="../../img/linkedin.svg" alt="">
-            </a>
+    <section class="buy">
+      <div class="buy__container">
+        <div class="buy__content">
+          <p class="buy__title">Покупай разумнее</p>
+          <p class="buy__description">
+            Покупая устройство Breezy Refurbished ты делаешь разумный выбор и платишь справедливую цену, твоё устройство
+            почти не отличается от нового, но при этом гораздо выгоднее.
+          </p>
+          <div class="buy__img">
+            <img src="../../img/buy.png" alt="" />
+          </div>
+
+          <ul class="buy__list list">
+            <li class="list__item">14 дней на возврат и обмен</li>
+            <li class="list__item">В среднем на 30% дешевле нового*</li>
+            <li class="list__item">Высокого качества упаковка и аксессуары</li>
+          </ul>
         </div>
-    </div>
-</section>
-<section class="faq">
-    <div class="faq__container">
-        <h2 class="title faq__title">Frequently Asked Questions</h2>
-        <div class="faq__accordion">
-            <div class="faq__accordion-item">
-                <div class="faq__accordion-title">What is the difference between refurbished and new device?</div>
-                <div class="faq__accordion-body">
-                    <div class="faq__accordion-content">
-                        A refurbished device has been given a second life and has been checked at more than 80 points by
-                        certified specialists, thoroughly cleaned and provided with the latest software. Because it is a
-                        used product, a refurbished device may contain small traces of use. These will never affect the
-                        functioning, because every refurbished device is 100% in technical condition.
-                    </div>
-                </div>
-            </div>
-            <div class="faq__accordion-item">
-                <div class="faq__accordion-title">What does the Refurbished Certificate mean?</div>
-                <div class="faq__accordion-body">
-                    <div class="faq__accordion-content">
-                        A refurbished device has been given a second life and has been checked at more than 80 points by
-                        certified specialists, thoroughly cleaned and provided with the latest software. Because it is a
-                        used product, a refurbished device may contain small traces of use. These will never affect the
-                        functioning, because every refurbished device is 100% in technical condition.
-                    </div>
-                </div>
-            </div>
-            <div class="faq__accordion-item">
-                <div class="faq__accordion-title">My device is not new, but used. How can this be?</div>
-                <div class="faq__accordion-body">
-                    <div class="faq__accordion-content">
-                        A refurbished device has been given a second life and has been checked at more than 80 points by
-                        certified specialists, thoroughly cleaned and provided with the latest software. Because it is a
-                        used product, a refurbished device may contain small traces of use. These will never affect the
-                        functioning, because every refurbished device is 100% in technical condition.
-                    </div>
-                </div>
-            </div>
-            <div class="faq__accordion-item">
-                <div class="faq__accordion-title">The device has some scratches, what should I do?</div>
-                <div class="faq__accordion-body">
-                    <div class="faq__accordion-content">
-                        A refurbished device has been given a second life and has been checked at more than 80 points by
-                        certified specialists, thoroughly cleaned and provided with the latest software. Because it is a
-                        used product, a refurbished device may contain small traces of use. These will never affect the
-                        functioning, because every refurbished device is 100% in technical condition.
-                    </div>
-                </div>
-            </div>
-            <div class="faq__accordion-item">
-                <div class="faq__accordion-title">The device is not completely clean, what should I do?</div>
-                <div class="faq__accordion-body">
-                    <div class="faq__accordion-content">
-                        A refurbished device has been given a second life and has been checked at more than 80 points by
-                        certified specialists, thoroughly cleaned and provided with the latest software. Because it is a
-                        used product, a refurbished device may contain small traces of use. These will never affect the
-                        functioning, because every refurbished device is 100% in technical condition.
-                    </div>
-                </div>
-            </div>
-            <div class="faq__accordion-item">
-                <div class="faq__accordion-title">The device does not boot up, what should I do?</div>
-                <div class="faq__accordion-body">
-                    <div class="faq__accordion-content">
-                        A refurbished device has been given a second life and has been checked at more than 80 points by
-                        certified specialists, thoroughly cleaned and provided with the latest software. Because it is a
-                        used product, a refurbished device may contain small traces of use. These will never affect the
-                        functioning, because every refurbished device is 100% in technical condition.
-                    </div>
-                </div>
-            </div>
-            <div class="faq__accordion-item">
-                <div class="faq__accordion-title">The device asks for a password that I did not set myself, what should
-                    I do?
-                </div>
-                <div class="faq__accordion-body">
-                    <div class="faq__accordion-content">
-                        A refurbished device has been given a second life and has been checked at more than 80 points by
-                        certified specialists, thoroughly cleaned and provided with the latest software. Because it is a
-                        used product, a refurbished device may contain small traces of use. These will never affect the
-                        functioning, because every refurbished device is 100% in technical condition.
-                    </div>
-                </div>
-            </div>
+      </div>
+    </section>
+    <section class="quality">
+      <div class="quality__container">
+        <div class="quality__content">
+          <div class="quality__img">
+            <img src="../../img/quality.png" alt="" />
+          </div>
+          <div class="quality__info">
+            <p class="quality__title">Чувствуй качество</p>
+            <p class="quality__description">
+              Мы оцениваем техническое и визуальное состояние, историю устройства. Каждое устройство
+              <b>Breezy Refurbished</b> проходит до 55-ти тестов на профильном программном обеспечении, которое
+              невозможно обмануть. Тщательно дезинфицируем и упаковываем гаджеты. На все устройства
+              <b>Breezy Refurbished</b> предоставляется гарантия качества!
+            </p>
+            <ul class="quality__list list">
+              <li class="list__item">До 2 лет гарантии</li>
+              <li class="list__item">55 параметров проверки</li>
+            </ul>
+          </div>
         </div>
-    </div>
-</section>
-<footer class="footer">
-    <nav class="footer__menu">
-        <ul class="footer__menu-list">
-            <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">About Us</a>
-            </li>
-            <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Mission</a>
-            </li>
-            <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Stores</a>
-            </li>
-            <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Products</a>
-            </li>
-            <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Refurbished</a>
-            </li>
-            <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Cases</a>
-            </li>
-            <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Contacts</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="footer__social">
-        <div class="footer__social">
-            <a href="" class="footer__social-link">
-                <img src="../../img/fb-gray.svg" alt="">
-            </a>
-            <a href="" class="footer__social-link">
-                <img src="../../img/twitter-gray.svg" alt="">
-            </a>
-            <a href="" class="footer__social-link">
-                <img src="../../img/linkedin-gray.svg" alt="">
-            </a>
+      </div>
+    </section>
+    <section class="emotions">
+      <div class="emotions__container">
+        <div class="emotions__content">
+          <div class="emotions__info">
+            <p class="emotions__title">Получай эмоции</p>
+            <p class="emotions__description">
+              Радуйся вместе с нами! Ты не только получаешь устройство выгоднее и с супер-гарантией, самое главное —
+              эмоции, как при покупке нового! Дополнительно к каждому устройству идут фирменные стикеры, для твоего
+              яркого настроения.
+            </p>
+            <ul class="emotions__list list">
+              <li class="list__item">Стикерпак с каждым устройством</li>
+              <li class="list__item">Devices come with a 1 year warranty</li>
+            </ul>
+          </div>
+          <div class="emotions__img">
+            <img src="../../img/emotions.png" alt="" />
+          </div>
         </div>
+      </div>
+    </section>
+    <section class="planet">
+      <div class="planet__container">
+        <div class="planet__content">
+          <div class="planet__container">
+            <p class="planet__title">Береги планету</p>
+            <p class="planet__description">
+              Забота об окружающей среде стоит на повестке дня уже у многих крупных брендов. Но ответственность за
+              сохранение окружающей среды несет каждый. Поэтому, каждый «реюзаный» гаджет — это вклад в общее дело. Ты
+              минимизируешь выбросы в атмосферу, тем самым спасаешь планету!
+            </p>
+            <div class="planet__img">
+              <img src="https://via.placeholder.com/1000x400" alt="" />
+            </div>
+
+            <ul class="planet__list list">
+              <li class="list__item">
+                <p class="list__title">100<span class="list__title-accent">%</span></p>
+                <p class="list__description">Экологическая упаковка</p>
+              </li>
+              <li class="list__item">
+                <p class="list__title">-70<span class="list__title-accent">kg</span></p>
+                <p class="list__description">Выбросы CO2</p>
+              </li>
+              <li class="list__item">
+                <p class="list__title">-100<span class="list__title-accent">l</span></p>
+                <p class="list__description">Расход воды</p>
+              </li>
+              <li class="list__item">
+                <p class="list__title">-137<span class="list__title-accent">kg</span></p>
+                <p class="list__description">Расход сырья</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="stores">
+      <div class="stores__container">
+        <div class="stores__content">
+          <p class="stores__title">Where to Buy</p>
+          <p class="stores__description">
+            The following resellers discovered Breezy! The best choice for Pre-Owned devices and the amount is still
+            growing!
+          </p>
+
+          <!--    BUTTONS-->
+
+          <div class="stores__reseller reseller">
+            <p class="reseller__title">Do you want to become our next reseller?</p>
+            <button id="stores-btn" class="reseller__button">Become a reseller</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__container">
+        <div class="about__content">
+          <p class="about__title">Who We Are</p>
+          <p class="about__description">
+            Breezy – часть международного холдинга <span class="about__description-accent">ASBIS</span>, дистрибьютора
+            IT-продуктов в более чем 75 странах по всему миру. Наша миссия – быть тем самым хорошим знакомым, который
+            создает лучшие условия для обмена и покупки гаджетов, давая им вторую жизнь.
+          </p>
+          <!--            ul>li>a>img-->
+          <ul class="about__social social">
+            <li class="social__item">
+              <a href="" class="social__link">
+                <img src="../../img/fb.svg" alt="" />
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link">
+                <img src="../../img/twitter.svg" alt="" />
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link">
+                <img src="../../img/linkedin.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div class="faq__container">
+        <div class="faq__content">
+          <p class="faq__title">Frequently Asked Questions</p>
+          <div class="faq__accordion accordion">
+            <div class="accordion__item">
+              <div class="accordion__title">What is the difference between refurbished and new device?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  A refurbished device has been given a second life and has been checked at more than 80 points by
+                  certified specialists, thoroughly cleaned and provided with the latest software. Because it is a used
+                  product, a refurbished device may contain small traces of use. These will never affect the
+                  functioning, because every refurbished device is 100% in technical condition.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__title">What does the Refurbished Certificate mean?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  A refurbished device has been given a second life and has been checked at more than 80 points by
+                  certified specialists, thoroughly cleaned and provided with the latest software. Because it is a used
+                  product, a refurbished device may contain small traces of use. These will never affect the
+                  functioning, because every refurbished device is 100% in technical condition.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__title">My device is not new, but used. How can this be?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  A refurbished device has been given a second life and has been checked at more than 80 points by
+                  certified specialists, thoroughly cleaned and provided with the latest software. Because it is a used
+                  product, a refurbished device may contain small traces of use. These will never affect the
+                  functioning, because every refurbished device is 100% in technical condition.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__title">The device has some scratches, what should I do?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  A refurbished device has been given a second life and has been checked at more than 80 points by
+                  certified specialists, thoroughly cleaned and provided with the latest software. Because it is a used
+                  product, a refurbished device may contain small traces of use. These will never affect the
+                  functioning, because every refurbished device is 100% in technical condition.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__title">The device is not completely clean, what should I do?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  A refurbished device has been given a second life and has been checked at more than 80 points by
+                  certified specialists, thoroughly cleaned and provided with the latest software. Because it is a used
+                  product, a refurbished device may contain small traces of use. These will never affect the
+                  functioning, because every refurbished device is 100% in technical condition.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__title">The device does not boot up, what should I do?</div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  A refurbished device has been given a second life and has been checked at more than 80 points by
+                  certified specialists, thoroughly cleaned and provided with the latest software. Because it is a used
+                  product, a refurbished device may contain small traces of use. These will never affect the
+                  functioning, because every refurbished device is 100% in technical condition.
+                </div>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__title">
+                The device asks for a password that I did not set myself, what should I do?
+              </div>
+              <div class="accordion__body">
+                <div class="accordion__content">
+                  A refurbished device has been given a second life and has been checked at more than 80 points by
+                  certified specialists, thoroughly cleaned and provided with the latest software. Because it is a used
+                  product, a refurbished device may contain small traces of use. These will never affect the
+                  functioning, because every refurbished device is 100% in technical condition.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__content">
+          <nav class="footer__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">About Us</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Mission</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Stores</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Products</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Refurbished</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Cases</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a href="" class="social__link">
+                <img src="../../img/fb-gray.svg" alt="" />
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link">
+                <img src="../../img/twitter-gray.svg" alt="" />
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link">
+                <img src="../../img/linkedin-gray.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copyright">&#169; 2022 Breezy!. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="modal" class="modal">
+      <div class="modal__window">
+        <p class="modal__title">Curious? Let's talk.</p>
+        <button class="modal__close" id="modal-close">
+          <img src="../../img/close.svg" alt="" />
+        </button>
+        <form class="modal__form">
+          <div class="modal__top">
+            <label class="modal__label" for="name"
+              >Name
+              <input class="modal__input" type="text" id="name" required />
+            </label>
+
+            <label class="modal__label" for="surname"
+              >Last name
+              <input class="modal__input" type="text" id="surname" required />
+            </label>
+          </div>
+
+          <label class="modal__label" for="email"
+            >Work e-mail
+            <input class="modal__input" type="email" id="email" required />
+          </label>
+
+          <label class="modal__label" for="message"
+            >Message
+            <textarea class="modal__input" id="message" rows="4" required></textarea>
+          </label>
+
+          <div class="modal__button">
+            <button id="modal-submit" class="modal__submit" type="submit">Send message</button>
+          </div>
+        </form>
+        <div class="modal__complete complete complete-hidden">
+          <div class="complete__img">
+            <img src="../../img/complete.svg" alt="" />
+          </div>
+          <p class="complete__description">Thanks for contacting us!</p>
+          <p class="complete__description">We will get in touch with you shortly.</p>
+        </div>
+      </div>
     </div>
-    <p class="footer__copyright">&#169; 2022 Breezy!. All rights reserved</p>
-</footer>
+
+    <!--<label class="modal__label" for="name">Name</label>-->
+    <!--<input class="modal__input" type="text" id="name" required>-->
+
+    <!--<label class="modal__label" for="surname">Last name</label>-->
+    <!--<input class="modal__input" type="text" id="surname" required>-->
+
+    <!--<label class="modal__label" for="email">Work e-mail</label>-->
+    <!--<input class="modal__input" type="email" id="email" required>-->
+
+    <!--<label class="modal__label" for="message">Message</label>-->
+    <!--<textarea class="modal__input" id="message" rows="4" required></textarea>-->
+
+    <!--<label class="modal__label" for="name">Name<input class="modal__input" type="text" id="name" required></label>-->
+
+    <!--<label class="modal__label" for="surname">Last name<input class="modal__input" type="text" id="surname" required></label>-->
+
+    <!--<label class="modal__label" for="email">Work e-mail<input class="modal__input" type="email" id="email" required></label>-->
+
+    <!--<label class="modal__label" for="message">Message<textarea class="modal__input" id="message" rows="4" required></textarea></label>-->
 
     <script src="libs/jquery/jquery-3.5.1.js"></script>
     <script src="libs/select2/select2.js"></script>
-	<script src="libs/jquery.inputmask/jquery.inputmask.bundle.js"></script>
+    <script src="libs/jquery.inputmask/jquery.inputmask.bundle.js"></script>
     <script src="js/bundle.js"></script>
     <script>
-        // let nom = JSON.parse(JSON.stringify({"samsung":["Galaxy Z Flip Samsung","Galaxy Z Fold 2 (F916) Samsung","Galaxy Fold 12\/512GB Samsung","N985F Samsung","N980F Samsung","N970F Samsung","N975F Samsung","N770F Samsung","N960F Samsung 512GB","N960F Samsung","N950F Samsung","N930F Samsung","N920C 32GB Samsung","N915F Samsung","N910H Samsung","N9000 Samsung","N7100 TAD Samsung","G988B Samsung","G985F Samsung","G980F Gray Samsung","G780F Samsung","G975F 1tb ceramic Samsung","G975F 512gb Samsung","G975F Samsung","G973F Samsung","G970F Samsung","G770F Samsung","G965F Samsung","G960F Samsung","G955F Samsung","G950F Samsung","G935F 32Gb Samsung","G930F DS 32GB Samsung","G928F 32Gb Samsung","G928F 64Gb Samsung","G925F 32Gb Samsung","G925F 64Gb Samsung","G920F DS 64GB Samsung","G920F SS 64GB Samsung","G920F DS 32GB Samsung","G920F SS 32GB Samsung","G900F DUOS Samsung","G900H Samsung","G800H Samsung","I9500 Samsung","I9300i Samsung","I9192 Samsung","I8160 Samsung","A015F Samsung","A105F Samsung","A107F Samsung","A115F Samsung","A205F Samsung","A207F Samsung","A217F Samsung","A300H Samsung","A305F Samsung (64gb)","A305F Samsung (32gb)","A307F Samsung (64gb)","A307F Samsung (32gb)","A315F Samsung (128gb)","A315F Samsung (64gb)","A310F Samsung","A320F Samsung","A405F Samsung","A415F Samsung","A500H Samsung","A510F Samsung","A505FM Samsung (128GB)","A505FN Samsung (64gb)","A515F Samsung (64gb)","A515F Samsung (128gb)","A520F Samsung","A530F Samsung","A600F Samsung","A605F Samsung","A500H Samsung","A705F Samsung","A710F Samsung","A720F Samsung","A730F Samsung","A750F Samsung","A715F Samsung","A805F Samsung","A920F Samsung","J105h Samsung","J110 Samsung","J120H Samsung","J200 Samsung","J250F Samsung","J260F Samsung","J320H Samsung","J330F Samsung","J400F Samsung","J415F Samsung","G570F Samsung","J500H Samsung","J510H Samsung","J530F Samsung","J600F Samsung","J610F Samsung","J500H Samsung","J701F Samsung","J710F Samsung","J730F Samsung","J810F Samsung","M105G Samsung","M205F Samsung","M307F Samsung","M315F Samsung","E500H Samsung","G130E Samsung","G350 Samsung","G355H Samsung","G360H Samsung","G361H Samsung","G530H Samsung","G531 Samsung","G532 samsung ","G850F Samsung","I8552 Samsung","S7262 Samsung","S7272 Samsung","S7390 Samsung","S5260 Samsung","G7102 Samsung"],"apple":["iPhone 12 Pro Max 512Gb","iPhone 12 Pro Max 256Gb","iPhone 12 Pro Max 128Gb","iPhone 12 Pro 512Gb","iPhone 12 Pro 256Gb","iPhone 12 Pro 128Gb","iPhone 12 256Gb","iPhone 12 128Gb","iPhone 12 64Gb","iPhone 12 Mini 256Gb","iPhone 12 Mini 128Gb","iPhone 12 Mini 64Gb","iPhone 11 Pro Max 256Gb","iPhone 11 Pro Max 512Gb","iPhone 11 Pro Max 64Gb","iPhone 11 Pro 256Gb","iPhone 11 Pro 512Gb","iPhone 11 Pro 64Gb","iPhone 11 128Gb","iPhone 11 256Gb","iPhone 11 64Gb","iPhone SE 2020 256Gb","iPhone SE 2020 128Gb","iPhone SE 2020 64Gb","iPhone Xs Max 256Gb","iPhone Xs Max 512Gb","iPhone Xs Max 64Gb","iPhone Xs 256Gb","iPhone Xs 512Gb","iPhone Xs 64Gb","iPhone X 256Gb","iPhone X 64Gb","iPhone Xr 128Gb","iPhone Xr 256Gb","iPhone Xr 64Gb","iPhone 8 plus 256Gb","iPhone 8 plus 64Gb","iPhone 8 256Gb","iPhone 8 64Gb","iPhone 7 plus 256Gb","iPhone 7 plus 128Gb","iPhone 7 plus 32Gb","iPhone 7 256Gb","iPhone 7 128Gb","iPhone 7 32Gb","iPhone 6s plus 128Gb","iPhone 6s plus 64Gb","iPhone 6s plus 32Gb","iPhone 6s plus 16Gb","iPhone 6s 128Gb","iPhone 6s 64Gb","iPhone 6s 32Gb","iPhone 6s 16Gb","iPhone 6 plus 128Gb","iPhone 6 plus 64Gb","iPhone 6 plus 16Gb","iPhone 6 128Gb","iPhone 6 64Gb","iPhone 6 32Gb","iPhone 6 16Gb","iPhone SE 128Gb","iPhone SE 64Gb","iPhone SE 32Gb","iPhone SE 16Gb","iPhone 5s 16Gb","iPhone 5s 32Gb","iPhone 5s 64Gb","iPhone 5c 32Gb","iPhone 5c 16Gb","iPhone 5c 8Gb","iPhone 5 16Gb","iPhone 5 32Gb","iPhone 5 64Gb"]}));
+      // let nom = JSON.parse(JSON.stringify({"samsung":["Galaxy Z Flip Samsung","Galaxy Z Fold 2 (F916) Samsung","Galaxy Fold 12\/512GB Samsung","N985F Samsung","N980F Samsung","N970F Samsung","N975F Samsung","N770F Samsung","N960F Samsung 512GB","N960F Samsung","N950F Samsung","N930F Samsung","N920C 32GB Samsung","N915F Samsung","N910H Samsung","N9000 Samsung","N7100 TAD Samsung","G988B Samsung","G985F Samsung","G980F Gray Samsung","G780F Samsung","G975F 1tb ceramic Samsung","G975F 512gb Samsung","G975F Samsung","G973F Samsung","G970F Samsung","G770F Samsung","G965F Samsung","G960F Samsung","G955F Samsung","G950F Samsung","G935F 32Gb Samsung","G930F DS 32GB Samsung","G928F 32Gb Samsung","G928F 64Gb Samsung","G925F 32Gb Samsung","G925F 64Gb Samsung","G920F DS 64GB Samsung","G920F SS 64GB Samsung","G920F DS 32GB Samsung","G920F SS 32GB Samsung","G900F DUOS Samsung","G900H Samsung","G800H Samsung","I9500 Samsung","I9300i Samsung","I9192 Samsung","I8160 Samsung","A015F Samsung","A105F Samsung","A107F Samsung","A115F Samsung","A205F Samsung","A207F Samsung","A217F Samsung","A300H Samsung","A305F Samsung (64gb)","A305F Samsung (32gb)","A307F Samsung (64gb)","A307F Samsung (32gb)","A315F Samsung (128gb)","A315F Samsung (64gb)","A310F Samsung","A320F Samsung","A405F Samsung","A415F Samsung","A500H Samsung","A510F Samsung","A505FM Samsung (128GB)","A505FN Samsung (64gb)","A515F Samsung (64gb)","A515F Samsung (128gb)","A520F Samsung","A530F Samsung","A600F Samsung","A605F Samsung","A500H Samsung","A705F Samsung","A710F Samsung","A720F Samsung","A730F Samsung","A750F Samsung","A715F Samsung","A805F Samsung","A920F Samsung","J105h Samsung","J110 Samsung","J120H Samsung","J200 Samsung","J250F Samsung","J260F Samsung","J320H Samsung","J330F Samsung","J400F Samsung","J415F Samsung","G570F Samsung","J500H Samsung","J510H Samsung","J530F Samsung","J600F Samsung","J610F Samsung","J500H Samsung","J701F Samsung","J710F Samsung","J730F Samsung","J810F Samsung","M105G Samsung","M205F Samsung","M307F Samsung","M315F Samsung","E500H Samsung","G130E Samsung","G350 Samsung","G355H Samsung","G360H Samsung","G361H Samsung","G530H Samsung","G531 Samsung","G532 samsung ","G850F Samsung","I8552 Samsung","S7262 Samsung","S7272 Samsung","S7390 Samsung","S5260 Samsung","G7102 Samsung"],"apple":["iPhone 12 Pro Max 512Gb","iPhone 12 Pro Max 256Gb","iPhone 12 Pro Max 128Gb","iPhone 12 Pro 512Gb","iPhone 12 Pro 256Gb","iPhone 12 Pro 128Gb","iPhone 12 256Gb","iPhone 12 128Gb","iPhone 12 64Gb","iPhone 12 Mini 256Gb","iPhone 12 Mini 128Gb","iPhone 12 Mini 64Gb","iPhone 11 Pro Max 256Gb","iPhone 11 Pro Max 512Gb","iPhone 11 Pro Max 64Gb","iPhone 11 Pro 256Gb","iPhone 11 Pro 512Gb","iPhone 11 Pro 64Gb","iPhone 11 128Gb","iPhone 11 256Gb","iPhone 11 64Gb","iPhone SE 2020 256Gb","iPhone SE 2020 128Gb","iPhone SE 2020 64Gb","iPhone Xs Max 256Gb","iPhone Xs Max 512Gb","iPhone Xs Max 64Gb","iPhone Xs 256Gb","iPhone Xs 512Gb","iPhone Xs 64Gb","iPhone X 256Gb","iPhone X 64Gb","iPhone Xr 128Gb","iPhone Xr 256Gb","iPhone Xr 64Gb","iPhone 8 plus 256Gb","iPhone 8 plus 64Gb","iPhone 8 256Gb","iPhone 8 64Gb","iPhone 7 plus 256Gb","iPhone 7 plus 128Gb","iPhone 7 plus 32Gb","iPhone 7 256Gb","iPhone 7 128Gb","iPhone 7 32Gb","iPhone 6s plus 128Gb","iPhone 6s plus 64Gb","iPhone 6s plus 32Gb","iPhone 6s plus 16Gb","iPhone 6s 128Gb","iPhone 6s 64Gb","iPhone 6s 32Gb","iPhone 6s 16Gb","iPhone 6 plus 128Gb","iPhone 6 plus 64Gb","iPhone 6 plus 16Gb","iPhone 6 128Gb","iPhone 6 64Gb","iPhone 6 32Gb","iPhone 6 16Gb","iPhone SE 128Gb","iPhone SE 64Gb","iPhone SE 32Gb","iPhone SE 16Gb","iPhone 5s 16Gb","iPhone 5s 32Gb","iPhone 5s 64Gb","iPhone 5c 32Gb","iPhone 5c 16Gb","iPhone 5c 8Gb","iPhone 5 16Gb","iPhone 5 32Gb","iPhone 5 64Gb"]}));
     </script>
 
     <script src="js/common.js"></script>
     <script src="js/calc.js"></script>
 
     <script>
+      TradeinCalculator.init("#tradeinCalculator", {
+        token: "f40cc2ac-f9f5-4030-b6c3-1dc4e5a5e68b", // for test a8dcef1d-f5eb-48b3-87dc-12ce51bee2fe
+        lang: "ru", // ru, ua
+        mode: "prod" // test, prod
+      });
 
-        TradeinCalculator.init('#tradeinCalculator', {
-            token: 'f40cc2ac-f9f5-4030-b6c3-1dc4e5a5e68b', // for test a8dcef1d-f5eb-48b3-87dc-12ce51bee2fe
-            lang: 'ru', // ru, ua
-            mode: 'prod' // test, prod
-        });
-    
-        /* Methods
+      /* Methods
             TradeinCalculator.getProductName();
             TradeinCalculator.getDeviceId();
             TradeinCalculator.getDeviceCurrency();
             TradeinCalculator.getDevicePrice();
         */
     </script>
-</body>
+  </body>
 </html>
