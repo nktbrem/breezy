@@ -319,6 +319,7 @@ img {
 
 	&__img {
 		max-width: 936px;
+		width: 100%;
 		margin: 0 auto;
 	}
 
@@ -336,8 +337,16 @@ img {
 			font-size: 22px;
 			line-height: 36px;
 			padding-left: 42px;
-			width: 50%;
 			position: relative;
+
+			&:first-child {
+				margin-right: 54px;
+			}
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				margin-bottom: 32px;
+			}
 
 			&::before {
 				//background: url("../img/bullet-check.svg") center center no-repeat;
