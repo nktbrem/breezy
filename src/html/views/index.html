@@ -27,11 +27,71 @@ _.template(require('./../includes/top-side.html').default)(data) %>
 
             <div class="header__buttons buttons">
                 <button class="buttons__lang">
-                    <img src="../../img/globe.svg" alt="language selection button">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M6.79128 0.837C7.38664 0.590447 7.9997 0.397826 8.62319 0.259851L8.6449 0.25507C10.1196 -0.0681507 11.6521 -0.085842 13.1464 0.211451C13.2042 0.222945 13.2618 0.234896 13.3193 0.247301C13.3551 0.253177 13.3903 0.260977 13.4249 0.270621C15.4504 0.728383 17.3071 1.75074 18.7782 3.22183C20.3164 4.7601 21.3641 6.71996 21.7886 8.85359C22.213 10.9872 21.9954 13.1988 21.163 15.2087C20.3307 17.2186 18.921 18.9366 17.1123 20.1454C15.7634 21.047 14.2378 21.6351 12.6469 21.876C12.5862 21.8906 12.524 21.8996 12.461 21.9025C11.9791 21.9671 11.4917 21.9999 11.0017 22C10.5056 22.0001 10.0111 21.9666 9.52164 21.9002C9.48411 21.8971 9.44694 21.8918 9.41027 21.8845C8.51283 21.7534 7.633 21.5116 6.79128 21.163C5.45639 20.6102 4.24348 19.7998 3.22183 18.7782C2.20018 17.7565 1.3898 16.5436 0.836995 15.2087C0.746404 14.99 0.663021 14.7686 0.586917 14.5451C0.559533 14.484 0.538108 14.4196 0.523381 14.3527C0.176944 13.2701 -0.000178761 12.1386 0 10.9983C0.000179027 9.85755 0.177719 8.73028 0.520854 7.65523C0.5365 7.5798 0.560641 7.50749 0.592234 7.43933C0.899072 6.54244 1.32217 5.68422 1.85455 4.88766C3.06338 3.07898 4.78136 1.66935 6.79128 0.837ZM13.9284 19.5103C14.6567 19.2596 15.3537 18.9152 16.001 18.4826C17.2683 17.6356 18.2962 16.4831 18.993 15.1367H14.9272C14.6936 16.6142 14.3601 18.0754 13.9284 19.5103ZM12.9007 15.1367C12.6243 16.7768 12.2165 18.3946 11.6803 19.9743C11.4549 19.9913 11.2285 20 11.0014 20C10.78 20 10.5589 19.9919 10.3387 19.9757C9.80058 18.3911 9.39234 16.7729 9.11458 15.1367H12.9007ZM15.1814 13.1367H19.7427C20.0532 11.8661 20.0844 10.5375 19.827 9.24384C19.8013 9.11489 19.7729 8.9867 19.7417 8.85938H15.3192C15.3295 9.20252 15.3344 9.54596 15.3341 9.88958C15.3363 10.9755 15.2852 12.0591 15.1814 13.1367ZM13.3182 8.85938C13.3292 9.20227 13.3345 9.5455 13.3341 9.88891L13.3341 9.89218C13.3364 10.9775 13.2819 12.0605 13.1716 13.1367H8.84091C8.69288 11.7161 8.64198 10.287 8.68859 8.85938H13.3182ZM15.1987 6.85938H18.9909C18.5682 6.04354 18.0207 5.29283 17.364 4.63604C16.5543 3.82644 15.602 3.18294 14.5609 2.73442C14.86 4.09503 15.073 5.47276 15.1987 6.85938ZM12.3547 2.10254C12.7561 3.66533 13.0351 5.25575 13.1899 6.85938H8.81792C8.97267 5.26084 9.25054 3.67013 9.65205 2.10152C10.5446 1.96633 11.4557 1.96566 12.3547 2.10254ZM3.51736 5.99899C4.4844 4.55208 5.84971 3.41729 7.44714 2.73096C7.14758 4.09651 6.93502 5.47538 6.80913 6.85938H3.00905C3.16191 6.56437 3.33149 6.27709 3.51736 5.99899ZM2.25828 8.85938H6.68759C6.64378 10.2868 6.69161 11.7156 6.83073 13.1367H2.25732C2.08667 12.4385 1.99989 11.7207 2 10.9986C2.00011 10.2739 2.08771 9.55591 2.25828 8.85938ZM3.00703 15.1367H7.08771C7.32295 16.6132 7.65785 18.0768 8.092 19.5172C7.91164 19.4557 7.73305 19.3883 7.5565 19.3152C6.46431 18.8629 5.47193 18.1999 4.63604 17.364C3.9807 16.7086 3.43162 15.9571 3.00703 15.1367Z"
+                              fill="#808D9A"/>
+                    </svg>
                 </button>
 
                 <button id="header-btn" class="buttons__contact">Get in touch</button>
+
+                <button id="burger-open" class="buttons__burger buttons__burger-show">
+                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0.5 1C0.5 0.447715 0.947715 0 1.5 0H24.5C25.0523 0 25.5 0.447715 25.5 1V1.5C25.5 2.05228 25.0523 2.5 24.5 2.5H1.5C0.947716 2.5 0.5 2.05228 0.5 1.5V1ZM0.5 9.75C0.5 9.19771 0.947715 8.75 1.5 8.75H24.5C25.0523 8.75 25.5 9.19771 25.5 9.75V10.25C25.5 10.8023 25.0523 11.25 24.5 11.25H1.5C0.947716 11.25 0.5 10.8023 0.5 10.25V9.75ZM1.5 17.5C0.947715 17.5 0.5 17.9477 0.5 18.5V19C0.5 19.5523 0.947716 20 1.5 20H24.5C25.0523 20 25.5 19.5523 25.5 19V18.5C25.5 17.9477 25.0523 17.5 24.5 17.5H1.5Z"
+                              fill="black"/>
+                    </svg>
+
+
+                </button>
             </div>
+
+
+
+
+
+            <nav id="mobile-menu"  class="header__mobile mobile">
+                <div class="mobile__container">
+                    <div class="mobile__header">
+                        <a class="mobile__logo" href="#">
+                            <img src="../../img/logo.svg" alt="Breezy reuse easy logo">
+                        </a>
+                        <div class="mobile__controls">
+                            <button id="" class="mobile__contact">Get in touch</button>
+                            <button id="burger-close" class="mobile__close">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.81317 1.18686C2.36407 0.737755 1.63593 0.737755 1.18683 1.18686C0.737724 1.63596 0.737724 2.3641 1.18683 2.8132L8.35754 9.98392L1.18683 17.1546C0.737724 17.6037 0.737724 18.3319 1.18683 18.781C1.63593 19.2301 2.36407 19.2301 2.81317 18.781L9.98389 11.6103L17.1546 18.7809C17.6037 19.23 18.3318 19.23 18.7809 18.7809C19.23 18.3318 19.23 17.6037 18.7809 17.1546L11.6102 9.98392L18.7809 2.81323C19.23 2.36413 19.23 1.63599 18.7809 1.18689C18.3318 0.737786 17.6037 0.737785 17.1546 1.18689L9.98389 8.35757L2.81317 1.18686Z"
+                                          fill="black"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="mobile__list">
+                        <li class="mobile__item">
+                            <a href="#" class="mobile__link mobile__link-active">Refurbished</a>
+                        </li>
+                        <li class="mobile__item">
+                            <a href="#" class="mobile__link">Where to buy</a>
+                        </li>
+                        <li class="mobile__item">
+                            <a href="#" class="mobile__link">Contacts</a>
+                        </li>
+                        <li class="mobile__item">
+                            <a href="#" class="mobile__link">Warranty</a>
+                        </li>
+                    </ul>
+                    <div class="mobile__languages">
+                        <a class="mobile__language mobile__language-active" href="#">EN</a>
+                        <a class="mobile__language" href="#">RU</a>
+                    </div>
+                    <button id="" class="mobile__button">Get in touch</button>
+                </div>
+
+
+            </nav>
         </div>
     </div>
 </header>
@@ -46,36 +106,36 @@ _.template(require('./../includes/top-side.html').default)(data) %>
             </p>
             <a href="" class="hero__button">Where to buy</a>
         </div>
-        <!--		<div class="hero__illustration">-->
-        <!--			<div class="hero__img">-->
-        <!--				<img src="../../img/hero-1.png" alt="Hero image" />-->
-        <!--			</div>-->
-        <!--			<div class="hero__feature feature">-->
-        <!--				<div class="feature__img">-->
-        <!--					<img src="../../img/medal.svg" alt="" />-->
-        <!--				</div>-->
+        		<div class="hero__illustration">
+        			<div class="hero__img">
+        				<img src="../../img/hero-1.png" alt="Hero image" />
+        			</div>
+        			<div class="hero__feature feature">
+        				<div class="feature__img">
+        					<img src="../../img/medal.svg" alt="" />
+        				</div>
 
-        <!--				<p class="feature__description">На 100% готов к использованию</p>-->
-        <!--			</div>-->
-        <!--			<div class="hero__feature feature">-->
-        <!--				<div class="feature__img">-->
-        <!--					<img src="../../img/medal.svg" alt="" />-->
-        <!--				</div>-->
-        <!--				<p class="feature__description">Премиум качество в каждой детали</p>-->
-        <!--			</div>-->
-        <!--			<div class="hero__feature feature">-->
-        <!--				<div class="feature__img">-->
-        <!--					<img src="../../img/checklist.svg" alt="" />-->
-        <!--				</div>-->
-        <!--				<p class="feature__description">Качественный MFI кабель в комплекте</p>-->
-        <!--			</div>-->
-        <!--			<div class="hero__feature feature">-->
-        <!--				<div class="feature__img">-->
-        <!--					<img src="../../img/checklist.svg" alt="" />-->
-        <!--				</div>-->
-        <!--				<p class="feature__description">Гарантия качества и положительных эмоций</p>-->
-        <!--			</div>-->
-        <!--		</div>-->
+        				<p class="feature__description">На 100% готов к использованию</p>
+        			</div>
+        			<div class="hero__feature feature">
+        				<div class="feature__img">
+        					<img src="../../img/medal.svg" alt="" />
+        				</div>
+        				<p class="feature__description">Премиум качество в каждой детали</p>
+        			</div>
+        			<div class="hero__feature feature">
+        				<div class="feature__img">
+        					<img src="../../img/checklist.svg" alt="" />
+        				</div>
+        				<p class="feature__description">Качественный MFI кабель в комплекте</p>
+        			</div>
+        			<div class="hero__feature feature">
+        				<div class="feature__img">
+        					<img src="../../img/checklist.svg" alt="" />
+        				</div>
+        				<p class="feature__description">Гарантия качества и положительных эмоций</p>
+        			</div>
+        		</div>
     </div>
 </section>
 <section class="features">
@@ -250,6 +310,37 @@ _.template(require('./../includes/top-side.html').default)(data) %>
                 Pre-Owned devices and the amount is still growing!</p>
 
             <!--    BUTTONS-->
+
+            <ul class="stores__locations locations">
+                <li class="locations__item locations__item-active">
+                    <button id="all" class="locations__countries">All</button>
+                </li>
+                <li class="locations__item">
+                    <button id="ukr" class="locations__countries">Ukraine</button>
+                </li>
+                <li class="locations__item">
+                    <button id="blr" class="locations__countries">Belarus</button>
+                </li>
+                <li class="locations__item">
+                    <button id="kz" class="locations__countries">Kazakhstan</button>
+                </li>
+                <li class="locations__item">
+                    <button id="cpr" class="locations__countries">Cyprus</button>
+                </li>
+            </ul>
+
+            <!--                ul>li-->
+            <ul class="locations__cards" id="stores">
+                <!--                    <li class="locations__card  card">-->
+                <!--                        <div class="card__logo">-->
+                <!--                            <img src="../../img/logo.svg" alt="">-->
+                <!--                        </div>-->
+                <!--                        <p class="card__description">Short description of this item that focuses on the benefits or-->
+                <!--                            success it brings your customer.</p>-->
+                <!--                        <a href="https://www.breezy.by" class="card__website" target="_blank" rel="noopener noreferrer">www.breezy.by</a>-->
+                <!--                    </li>-->
+            </ul>
+
 
             <div class="stores__reseller reseller">
                 <p class="reseller__title">Do you want to become our next reseller?</p>
@@ -450,41 +541,44 @@ _.template(require('./../includes/top-side.html').default)(data) %>
 
 <div id="modal" class="modal">
     <div class="modal__window">
-        <p class="modal__title">Curious? Let's talk.</p>
-        <button class="modal__close" id="modal-close">
-            <img src="../../img/close.svg" alt="">
-        </button>
-        <form class="modal__form">
-            <div class="modal__top">
-                <label class="modal__label" for="name">Name
-                    <input class="modal__input" type="text" id="name" required>
+        <div class="modal__container">
+            <p class="modal__title">Curious? Let's talk.</p>
+            <button class="modal__close" id="modal-close">
+                <img src="../../img/close.svg" alt="">
+            </button>
+            <form class="modal__form">
+                <div class="modal__top">
+                    <label class="modal__label" for="name">Name
+                        <input class="modal__input" type="text" id="name" required>
+                    </label>
+
+                    <label class="modal__label" for="surname">Last name
+                        <input class="modal__input" type="text" id="surname" required>
+                    </label>
+                </div>
+
+                <label class="modal__label" for="email">Work e-mail
+                    <input class="modal__input" type="email" id="email" required>
                 </label>
 
-                <label class="modal__label" for="surname">Last name
-                    <input class="modal__input" type="text" id="surname" required>
+
+                <label class="modal__label" for="message">Message
+                    <textarea class="modal__input" id="message" rows="4" required></textarea>
                 </label>
+
+                <div class="modal__button">
+                    <button id="modal-submit" class="modal__submit" type="submit">Send message</button>
+                </div>
+            </form>
+            <div class="modal__complete complete complete-hidden">
+                <div class="complete__container">
+                    <div class="complete__img">
+                        <img src="../../img/complete.svg" alt="">
+                    </div>
+                    <p class="complete__description">Thanks for contacting us!</p>
+                    <p class="complete__description">We will get in touch with you shortly.</p>
+                </div>
             </div>
-
-            <label class="modal__label" for="email">Work e-mail
-                <input class="modal__input" type="email" id="email" required>
-            </label>
-
-
-            <label class="modal__label" for="message">Message
-                <textarea class="modal__input" id="message" rows="4" required></textarea>
-            </label>
-
-            <div class="modal__button">
-                <button id="modal-submit" class="modal__submit" type="submit">Send message</button>
-            </div>
-        </form>
-        <div class="modal__complete complete complete-hidden">
-            <div class="complete__img">
-                <img src="../../img/complete.svg" alt="">
-            </div>
-            <p class="complete__description">Thanks for contacting us!</p>
-            <p class="complete__description">We will get in touch with you shortly.</p>
-
         </div>
     </div>
 </div>
