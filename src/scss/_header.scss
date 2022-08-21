@@ -17,7 +17,7 @@ svg {
 
 .header {
   &__container {
-    max-width: 1180px;
+    max-width: 1200px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -37,33 +37,40 @@ svg {
       gap: 4px;
     }
 
-    &__item {
+    &__link {
+      display: inline-block;
       padding: 8px 20px;
-      background: $clr_white;
+      background-color: $clr_white;
       border-radius: 8px;
       transition: 0.3s;
+      font-weight: 700;
+      line-height: 32px;
+
+      &-active {
+        background-color: $clr_background;
+      }
 
       &:hover {
         background-color: $clr_background;
       }
     }
-
-    &__link {
-      font-weight: 700;
-      line-height: 32px;
-    }
   }
 
 
-  .buttons {
+  &__controls {
     display: flex;
     align-items: center;
     gap: 16px;
+  }
 
-    &__lang {
+  .languages {
+    position: relative;
+
+    &__select {
       padding: 14px;
       border-radius: 8px;
-      background: $clr_background;
+      background-color: $clr_background;
+      cursor: pointer;
 
       path {
         fill: #808D9A;
@@ -75,20 +82,66 @@ svg {
       }
     }
 
-    &__contact {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 6px;
-      background-color: $clr_accent;
-      font-weight: 700;
-      line-height: 24px;
-      color: $clr_white;
+    &__list {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 8px;
+      position: absolute;
+      left: 0;
+      top: 66px;
+      background-color: $clr_white;
+      padding: 16px 32px;
+      border-radius: 16px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+      pointer-events: none;
+
+      &-show {
+        display: flex;
+      }
     }
 
-    &__burger {
-      padding: 5px 2.5px;
-      display: none;
+    &__item {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 8px 16px;
+      background-color: $clr_white;
+      border-radius: 8px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &-active {
+        background-color: $clr_background;
+      }
+
+      &:hover {
+        background-color: $clr_background;
+      }
     }
+  }
+
+
+  &__contact {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 6px;
+    background-color: $clr_accent;
+    font-weight: 700;
+    line-height: 24px;
+    color: $clr_white;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $clr_hover;
+    }
+  }
+
+  &__burger {
+    padding: 5px 2.5px;
+    display: none;
   }
 
 
@@ -101,6 +154,7 @@ svg {
     right: 0;
     height: 100vh;
     width: 100vw;
+    z-index: 1;
     background-color: $clr_white;
 
     &-show {
@@ -110,6 +164,9 @@ svg {
     &__container {
       padding: 0 36px;
       margin: 0 auto;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     &__header {
@@ -150,6 +207,14 @@ svg {
       }
     }
 
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+      flex-grow: 1;
+    }
+
     &__list {
       display: flex;
       flex-direction: column;
@@ -185,20 +250,22 @@ svg {
       }
     }
 
+    &__bottom {
+      margin-bottom: 16px;
+      display: none;
+    }
+
     &__button {
       width: 100%;
-      padding: 14px 24px;
+      padding: 8px 24px;
       border-radius: 6px;
       background-color: $clr_accent;
       font-weight: 700;
-      line-height: 24px;
+      font-size: 16px;
+      line-height: 26px;
       text-align: center;
       color: $clr_white;
     }
-  }
-
-  @media screen and (max-width: 1365px) {
-
   }
 
   @media screen and (max-width: 1023px) {
@@ -207,16 +274,22 @@ svg {
       display: none;
     }
 
-    .buttons {
-      &__lang {
+    &__controls {
+      gap: 24px;
+    }
+
+    .languages {
+      &__select {
         display: none;
       }
+    }
 
-      &__burger {
-        display: block;
-      }
+
+    &__burger {
+      display: block;
     }
   }
+
 
   @media screen and (max-width: 767px) {
 
@@ -233,11 +306,11 @@ svg {
       height: 28px;
     }
 
-    .buttons {
-      &__contact {
-        display: none;
-      }
+
+    &__contact {
+      display: none;
     }
+
 
     .mobile {
 
@@ -252,6 +325,10 @@ svg {
       &__logo {
         width: 80px;
         height: 28px;
+      }
+
+      &__contact {
+        display: none;
       }
 
       &__list {
@@ -271,6 +348,10 @@ svg {
       &__language {
         line-height: 24px;
       }
+
+      &__bottom {
+        display: block;
+      }
     }
   }
 }
@@ -280,10 +361,11 @@ svg {
 .hero {
 
   &__container {
-    max-width: 1180px;
+    max-width: 1200px;
     padding: 0 36px;
     margin: 0 auto;
     display: flex;
+    position: relative;
   }
 
   &__content {
@@ -317,10 +399,15 @@ svg {
     font-size: 20px;
     line-height: 24px;
     color: $clr_white;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $clr_hover;
+    }
   }
 
   &__illustration {
-    position: relative;
+    //position: relative;
     width: 100%;
   }
 
@@ -330,7 +417,7 @@ svg {
     width: 100%;
     position: absolute;
     top: 37px;
-    right: -37px;
+    right: -1px;
     z-index: -1;
   }
 
@@ -359,32 +446,39 @@ svg {
     &:nth-child(2) {
       position: absolute;
       top: 430px;
-      right: 398px;
+      right: 433px;
     }
 
     &:nth-child(3) {
       position: absolute;
       top: 245px;
-      right: -75px;
+      right: -40px;
     }
 
     &:nth-child(4) {
       position: absolute;
       top: 750px;
-      right: 355px;
+      right: 390px;
     }
 
     &:nth-child(5) {
       position: absolute;
       top: 553px;
-      right: -42px;
+      right: -6px;
     }
   }
 
   @media screen and (max-width: 1365px) {
-    &__illustration {
-      max-width: 480px;
+    &__content {
+      padding: 170px 0 247px 0;
     }
+
+    &__img {
+      max-width: 478px;
+      top: 32px;
+      right: 23px;
+    }
+
     &__title {
       font-size: 60px;
       line-height: 66px;
@@ -394,11 +488,88 @@ svg {
       font-weight: 400;
       font-size: 20px;
       line-height: 32px;
-      margin-bottom: 64px;
+    }
+
+    .feature {
+
+      &:nth-child(2) {
+        top: 365px;
+        right: 322px;
+      }
+
+      &:nth-child(3) {
+        top: 185px;
+        right: 34px;
+      }
+
+      &:nth-child(4) {
+        top: 613px;
+        right: 312px;
+      }
+
+      &:nth-child(5) {
+        top: 409px;
+        right: 34px;
+      }
     }
   }
 
   @media screen and (max-width: 1023px) {
+
+    &__container {
+      position: static;
+      flex-direction: column;
+    }
+
+    &__content {
+      padding: 32px 0 0 0;
+    }
+
+    &__title {
+      max-width: 100%;
+    }
+
+    &__description {
+      max-width: 100%;
+    }
+
+    &__button {
+      margin-bottom: 60px;
+    }
+
+    &__illustration {
+      position: relative;
+    }
+
+    &__img {
+      position: static;
+      margin: 0 auto;
+      max-width: 596px;
+    }
+
+    .feature {
+
+      &:nth-child(2) {
+        top: 393px;
+        right: 477px;
+      }
+
+      &:nth-child(3) {
+        top: 207px;
+        right: 4px;;
+      }
+
+      &:nth-child(4) {
+        top: 713px;
+        right: 435px;
+      }
+
+      &:nth-child(5) {
+        top: 515px;
+        right: 39px;
+      }
+    }
+
 
   }
   @media screen and (max-width: 767px) {
@@ -407,6 +578,72 @@ svg {
       padding: 0 16px;
     }
 
+    &__content {
+      padding: 16px 0 0 0;
+    }
+
+    &__title {
+      max-width: 500px;
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    &__description {
+      max-width: 500px;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+
+    &__button {
+      padding: 8px 24px;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    &__img {
+      max-width: 288px;
+      min-width: initial;
+    }
+
+    .feature {
+      max-width: 156px;
+      padding: 8px;
+      border-radius: 8px;
+      gap: 8px;
+
+      &__img {
+        width: 24px;
+        height: 24px;
+      }
+
+      &__description {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      &:nth-child(2) {
+        top: 192px;
+        right: 109px;
+      }
+
+      &:nth-child(3) {
+        top: 73px;
+        right: 10px;
+      }
+
+      &:nth-child(4) {
+        top: 362px;
+        right: 106px;
+      }
+
+      &:nth-child(5) {
+        top: 277px;
+        right: -9px;
+      }
+
+    }
   }
 }
 
@@ -415,7 +652,7 @@ svg {
 
 .features {
   &__container {
-    max-width: 1180px;
+    max-width: 1200px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -467,6 +704,10 @@ svg {
       flex-direction: column;
       gap: 80px;
     }
+
+    &__description {
+      max-width: 456px;
+    }
   }
   @media screen and (max-width: 767px) {
 
@@ -483,14 +724,20 @@ svg {
       gap: 32px;
     }
 
+    &__img {
+      width: 48px;
+      height: 48px;
+    }
+
     &__title {
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 20px;
+      line-height: 24px
     }
 
     &__description {
-      font-size: 18px;
-      line-height: 32px;
+      max-width: 300px;
+      font-size: 16px;
+      line-height: 26px;
     }
   }
 }
@@ -501,7 +748,7 @@ svg {
 .process {
 
   &__container {
-    max-width: 1180px;
+    max-width: 1200px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -547,16 +794,30 @@ svg {
     }
 
     &__thumbnail {
-      //opacity: 0.2;
-
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
       position: absolute;
     }
 
     &__button {
+      opacity: 1;
+      width: 72px;
+      height: 72px;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.25);
+      }
+
+    }
+
+    &-active {
+      opacity: 0;
+      pointer-events: none;
     }
   }
 
@@ -587,6 +848,12 @@ svg {
       line-height: 26px;
       margin-bottom: 32px;
     }
+    .video {
+      &__button {
+        width: 56px;
+        height: 56px;
+      }
+    }
   }
 }
 
@@ -594,13 +861,13 @@ svg {
 
 .buy {
   &__container {
-    max-width: 1180px;
+    max-width: 1200px;
     padding: 0 36px;
     margin: 0 auto;
   }
 
   &__content {
-    padding: 100px 0 120px 0;
+    padding: 80px 0 120px 0;
   }
 
   &__title {
@@ -750,7 +1017,7 @@ svg {
   background-color: $clr_background;
 
   &__container {
-    max-width: 1166px;
+    max-width: 1186px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -884,7 +1151,7 @@ svg {
 .emotions {
 
   &__container {
-    max-width: 1336px;
+    max-width: 1356px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -1015,7 +1282,7 @@ svg {
 .planet {
 
   &__container {
-    max-width: 976px;
+    max-width: 996px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -1042,11 +1309,16 @@ svg {
     margin: 0 auto;
   }
 
+  &__features {
+    margin: 0 auto;
+  }
+
   .list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+
 
     &__title {
       font-weight: 700;
@@ -1088,13 +1360,20 @@ svg {
       margin-bottom: 10px;
     }
 
+    &__features {
+      max-width: 430px;
+    }
+
     .list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       justify-content: center;
+      align-items: center;
       gap: 120px 72px;
 
-      &__item {
-        width: 45%;
-      }
+      //&__item {
+      //  width: 45%;
+      //}
     }
   }
 
@@ -1124,7 +1403,8 @@ svg {
     }
 
     .list {
-      justify-content: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
       gap: 48px;
 
       &__item {
@@ -1149,13 +1429,17 @@ svg {
   background-color: $clr_background;
 
   &__container {
-    max-width: 1180px;
+    max-width: 1200px;
     padding: 0 36px;
     margin: 0 auto;
   }
 
-  &__content {
-    padding: 120px 0;
+  &__top {
+    padding: 120px 0 0 0;
+  }
+
+  &__bottom {
+    padding: 0 0 120px 0;
   }
 
   &__title {
@@ -1179,9 +1463,18 @@ svg {
   //---------------------------COUNTRIES------------------------------------//
   .locations {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
+    overflow-x: auto;
+    margin-bottom: 10px;
+    padding-bottom: 16px;
+
+    &__list {
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
 
     &__item {
       display: inline-block;
@@ -1191,6 +1484,7 @@ svg {
       font-weight: 700;
       font-size: 18px;
       line-height: 28px;
+      cursor: pointer;
 
       &-active {
         border: 2px solid #D1D1DB;
@@ -1198,25 +1492,40 @@ svg {
       }
     }
 
+
+    //---------------------------CARDS------------------------------------//
+
     &__cards {
-      padding: 24px 0;
-      display: flex;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: space-between;
       //align-items: center;
-      flex-wrap: wrap;
       gap: 24px;
+      margin-bottom: 24px;
 
       .card {
-        padding: 40px 24px;
+        padding: 56px 24px;
         background-color: $clr_white;
         border-radius: 16px;
-        max-width: 264px;
+        max-width: 336px;
+        margin: 0 auto;
+
         //height: 100%;
 
         &__logo {
-          max-width: 70%;
-          max-height: 42px;
           margin-bottom: 24px;
+          max-width: 170px;
+          object-fit: contain;
+          height: 42px;
+          display: flex;
+          align-items: center;
+        }
+
+        &__img {
+          height: auto;
+          max-height: 42px;
+          width: 100%;
+          max-width: max-content;
         }
 
         &__description {
@@ -1232,40 +1541,154 @@ svg {
           color: $clr_accent;
         }
       }
+    }
+  }
 
+  .reseller {
+    background-color: $clr_white;
+    border-radius: 16px;
+    padding: 56px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    &__title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 24px;
     }
 
+    &__button {
+      //display: inline-block;
+      padding: 16px 32px;
+      margin: 0 auto;
+      border-radius: 6px;
+      background-color: $clr_accent;
+      font-weight: 700;
+      color: $clr_white;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $clr_hover;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 1023px) {
+    .locations {
+      &__cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    &__container {
+      padding: 0 16px;
+    }
+
+    &__top {
+      padding: 60px 0 0 0;
+    }
+
+    &__bottom {
+      padding: 0 0 60px 0;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 16px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 auto 32px auto;
+    }
+
+    .locations {
+      justify-content: flex-start;
+
+      &__cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 16px;
+
+        .card {
+          padding: 40px 24px;
+        }
+      }
+    }
+
+    .reseller {
+      font-size: 24px;
+      line-height: 34px;
+
+
+      &__title {
+        font-size: 24px;
+        line-height: 34px;
+      }
+
+      &__button {
+        padding: 8px 24px;
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+    }
   }
 }
 
-.reseller {
-  background-color: $clr_white;
-  border-radius: 16px;
-  padding: 56px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  &__title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 45px;
-    margin-bottom: 24px;
-  }
+//.locations {
+//  overflow-x: auto;
 
-  &__button {
-    //display: inline-block;
-    padding: 16px 32px;
-    margin: 0 auto;
-    border-radius: 6px;
-    background-color: $clr_accent;
-    font-weight: 700;
-    color: $clr_white;
-  }
-}
+//&__cards {
+//  padding: 24px 0;
+//  display: flex;
+//  justify-content: center;
+//  //align-items: center;
+//  flex-wrap: wrap;
+//  gap: 24px;
+//
+//  .card {
+//    padding: 40px 24px;
+//    background-color: $clr_white;
+//    border-radius: 16px;
+//    max-width: 264px;
+//    //height: 100%;
+//
+//    &__logo {
+//      max-width: 70%;
+//      max-height: 42px;
+//      margin-bottom: 24px;
+//    }
+//
+//    &__description {
+//      font-weight: 400;
+//      font-size: 16px;
+//      line-height: 29px;
+//      margin-bottom: 16px;
+//    }
+//
+//    &__url {
+//      font-size: 16px;
+//      line-height: 26px;
+//      color: $clr_accent;
+//    }
+//  }
+//
+//}
+//}
+
 
 @media screen and (max-width: 767px) {
 
@@ -1289,22 +1712,7 @@ svg {
     line-height: 26px;
     margin: 0 0 32px 0;
   }
-  .reseller {
-    font-size: 24px;
-    line-height: 34px;
 
-
-    &__title {
-      font-size: 24px;
-      line-height: 34px;
-    }
-
-    &__button {
-      font-size: 16px;
-      line-height: 26px;
-    }
-
-  }
 }
 
 
@@ -1313,7 +1721,7 @@ svg {
 .about {
 
   &__container {
-    max-width: 898px;
+    max-width: 918px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -1392,7 +1800,7 @@ svg {
 
 .faq {
   &__container {
-    max-width: 988px;
+    max-width: 1008px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -1505,7 +1913,7 @@ svg {
   background-color: $clr_background;
 
   &__container {
-    max-width: 804px;
+    max-width: 824px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -1603,7 +2011,7 @@ svg {
   }
 
   &__container {
-    max-width: 636px;
+    max-width: 656px;
     padding: 0 36px;
     margin: 0 auto;
   }
@@ -1622,6 +2030,11 @@ svg {
     height: 32px;
     right: 20px;
     top: 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
   }
 
   &__label {
