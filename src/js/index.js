@@ -205,13 +205,15 @@ openVideoModal.forEach(btn => {
 closeVideoModal.addEventListener('click', () => {
     videoModal.classList.remove('video-show');
     body.classList.remove('modal-open');
+    videoGrade.firstElementChild.src = videoGrade.firstElementChild.src;
 })
 
 //Close when click outside of modal
 document.addEventListener('click', (event) => {
     if (event.target === videoModal) {
         videoModal.classList.remove('video-show');
-        body.classList.remove('modal-open')
+        body.classList.remove('modal-open');
+        videoGrade.firstElementChild.src = videoGrade.firstElementChild.src;
     }
 })
 
