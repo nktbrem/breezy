@@ -76,7 +76,7 @@
 
   &__name {
     display: flex;
-    gap: 24px;
+    justify-content: space-between;
   }
 
   &__input {
@@ -147,6 +147,19 @@
 
     &__container {
       padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      max-width: 100%;
+    }
+
+    &__window {
+      padding: 60px 0 0 0;
+    }
+
+    &__form {
+      flex-grow: 1;
+      justify-content: space-between;
     }
 
     &__title {
@@ -155,7 +168,7 @@
     }
 
     &__input {
-      margin-bottom: 16px;
+      margin-bottom: 32px;
     }
 
     &__name {
@@ -168,6 +181,7 @@
       font-size: 16px;
       line-height: 26px;
       padding: 8px 24px;
+      margin-bottom: 32px;
     }
 
     .complete {

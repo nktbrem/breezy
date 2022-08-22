@@ -95,6 +95,7 @@ svg {
       padding: 16px 32px;
       border-radius: 16px;
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+      z-index: 90;
 
       &-show {
         display: flex;
@@ -281,8 +282,15 @@ svg {
       &__select {
         display: none;
       }
-    }
 
+      &__list {
+        display: none;
+
+        &-show {
+          display: none;
+        }
+      }
+    }
 
     &__burger {
       display: block;
