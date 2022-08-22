@@ -13,7 +13,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
                         <a href="#" class="menu__link menu__link-active">Refurbished</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Where to buy</a>
+                        <a href="#stores-section" class="menu__link">Where to buy</a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">Contacts</a>
@@ -23,10 +23,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
                     </li>
                 </ul>
             </nav>
-
-
             <div class="header__controls">
-
                 <div class="header__languages languages">
                     <div id="languages-btn" class="languages__select">
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,10 +42,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
                         </li>
                     </ul>
                 </div>
-
-
                 <button data-contact class="header__contact">Get in touch</button>
-
                 <button id="burger-open" class="header__burger header__burger-show">
                     <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -57,8 +51,6 @@ _.template(require('./../includes/top-side.html').default)(data) %>
                     </svg>
                 </button>
             </div>
-
-
             <nav id="mobile-menu" class="header__mobile mobile">
                 <div class="mobile__container">
                     <div class="mobile__header">
@@ -79,13 +71,12 @@ _.template(require('./../includes/top-side.html').default)(data) %>
                     </div>
                     <div class="mobile__content">
                         <div class="mobile__top">
-
                             <ul class="mobile__list">
                                 <li class="mobile__item">
                                     <a href="#" class="mobile__link mobile__link-active">Refurbished</a>
                                 </li>
                                 <li class="mobile__item">
-                                    <a href="#" class="mobile__link">Where to buy</a>
+                                    <a data-anchor href="#stores-section" class="mobile__link">Where to buy</a>
                                 </li>
                                 <li class="mobile__item">
                                     <a href="#" class="mobile__link">Contacts</a>
@@ -156,6 +147,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
         </div>
     </div>
 </section>
+
 <section class="features">
     <div class="features__container">
         <div class="features__content">
@@ -228,7 +220,6 @@ _.template(require('./../includes/top-side.html').default)(data) %>
                 <img src="../../img/buy1x.png" srcset="../../img/buy1x.png, ../../img/buy2x.png 2x"
                      alt="Buy smart image">
             </div>
-
             <ul class="buy__list list">
                 <li class="list__item">14 дней на возврат и обмен</li>
                 <li class="list__item">В среднем на 30% дешевле нового*</li>
@@ -238,6 +229,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
         </div>
     </div>
 </section>
+
 <section class="quality">
     <div class="quality__container">
         <div class="quality__content">
@@ -262,6 +254,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
         </div>
     </div>
 </section>
+
 <section class="emotions">
     <div class="emotions__container">
         <div class="emotions__content">
@@ -286,6 +279,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
         </div>
     </div>
 </section>
+
 <section class="planet">
     <div class="planet__container">
         <div class="planet__content">
@@ -326,7 +320,184 @@ _.template(require('./../includes/top-side.html').default)(data) %>
         </div>
     </div>
 </section>
-<section class="stores">
+
+<section class="grades">
+    <div class="grades__container">
+        <div class="rate">
+            <div class="wrap">
+                <p class="title">Выбирай сам</p>
+                <div class="rate_slider_nav">
+                    <div class="rate_slider_nav_item">A+</div>
+                    <div class="rate_slider_nav_item">A</div>
+                    <div class="rate_slider_nav_item">B</div>
+                    <div class="rate_slider_nav_item">C</div>
+                </div>
+                <div class="rate_slider">
+                    <div class="rate_slider_slide">
+                        <div class="rate_slider_wrap">
+                            <div class="rate_slider_side">
+                                <div class="rate_slider_cont">
+                                    <img src="../../img/grade-aa-mob.png" alt="AA grade image"
+                                         class="rate_slider_mob_img"/>
+                                    <div class="rate_slider_condition__mob">
+                                        <button data-grade="aa" class="btn btn_violet">
+                                            <img src="../../img/play-small.svg" alt="Play button">
+                                            <span class="rate_slider_condition-text">Видеообзор</span>
+                                        </button>
+                                    </div>
+                                    <div class="rate_slider_info">
+                                        <p class="rate_slider_val">A+</p>
+                                        <div class="rate_slider_condition">
+                                            <button data-grade="aa" class="btn btn_violet">
+                                                <img src="../../img/play-small.svg" alt="Play button">
+                                                <span class="rate_slider_condition-text">Видеообзор</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="rate_slider_text text">
+                                        Устройство как новое. Возможны единичные микроцарапины. Возможна замена
+                                        компонентов в целях восстановления. Комплектуется заводской или фирменной эко
+                                        коробкой by Breezy и кабелем. 100% протестировано, все функции работают!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rate_slider_img">
+                                <img src="../../img/grade-aa-desktop.png" alt="AA grade image" width="325"
+                                     class="js_zoom_img"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rate_slider_slide">
+                        <div class="rate_slider_wrap">
+                            <div class="rate_slider_side">
+                                <div class="rate_slider_cont">
+                                    <img src="../../img/grade-a-mob.png" alt="A grade image"
+                                         class="rate_slider_mob_img"/>
+                                    <div class="rate_slider_condition__mob">
+                                        <button data-grade="a" class="btn btn_violet">
+                                            <img src="../../img/play-small.svg" alt="Play button">
+                                            <span class="rate_slider_condition-text">Видеообзор</span>
+                                        </button>
+                                    </div>
+                                    <div class="rate_slider_info">
+                                        <div class="rate_slider_val">A</div>
+                                        <div class="rate_slider_condition">
+                                            <button data-grade="a" class="btn btn_violet">
+                                                <img src="../../img/play-small.svg" alt="Play button">
+                                                <span class="rate_slider_condition-text">Видеообзор</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="rate_slider_text text">
+                                        Устройство в отличном состоянии. Возможны единичные микроцарапины на дисплее и
+                                        мелкие царапины на боковых гранях корпуса. Возможна замена компонентов в целях
+                                        восстановления. Комплектуется заводской или фирменной эко коробкой by Breezy и
+                                        кабелем. 100% протестировано, все функции работают!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rate_slider_img">
+                                <img src="../../img/grade-a-desktop.png" alt="A grade image" width="325"
+                                     class="js_zoom_img"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rate_slider_slide">
+                        <div class="rate_slider_wrap">
+                            <div class="rate_slider_side">
+                                <div class="rate_slider_cont">
+                                    <img src="../../img/grade-b-mob.png" alt="B grade image"
+                                         class="rate_slider_mob_img"/>
+                                    <div class="rate_slider_condition__mob">
+                                        <button data-grade="b" class="btn btn_violet">
+                                            <img src="../../img/play-small.svg" alt="Play button">
+                                            <span class="rate_slider_condition-text">Видеообзор</span>
+                                        </button>
+                                    </div>
+                                    <div class="rate_slider_info">
+                                        <div class="rate_slider_val">B</div>
+                                        <div class="rate_slider_condition">
+                                            <button data-grade="b" class="btn btn_violet">
+                                                <img src="../../img/play-small.svg" alt="Play button">
+                                                <span class="rate_slider_condition-text">Видеообзор</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="rate_slider_text text">
+                                        Устройство в хорошем состоянии. Возможны мелкие царапины, потертости. Возможна
+                                        замена компонентов в целях восстановления. Комплектуется заводской или фирменной
+                                        эко коробкой by Breezy и кабелем. 100% протестировано, все функции работают!
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="rate_slider_img">
+                                <img src="../../img/grade-b-desktop.png" alt="B grade image" width="325"
+                                     class="js_zoom_img"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rate_slider_slide">
+                        <div class="rate_slider_wrap">
+                            <div class="rate_slider_side">
+                                <div class="rate_slider_cont">
+                                    <img src="../../img/grade-c-mob.png" alt="C grade image"
+                                         class="rate_slider_mob_img"/>
+                                    <div class="rate_slider_condition__mob">
+                                        <button data-grade="c" class="btn btn_violet">
+                                            <img src="../../img/play-small.svg" alt="Play button">
+                                            <span class="rate_slider_condition-text">Видеообзор</span>
+                                        </button>
+                                    </div>
+                                    <div class="rate_slider_info">
+                                        <div class="rate_slider_val">B</div>
+                                        <div class="rate_slider_condition">
+                                            <button data-grade="c" class="btn btn_violet">
+                                                <img src="../../img/play-small.svg" alt="Play button">
+                                                <span class="rate_slider_condition-text">Видеообзор</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <p class="rate_slider_text text">
+                                        Устройство со значительными следами эксплуатации. На дисплее возможны
+                                        незначительные засветы, глубокие царапины. Корпус может иметь следы ударов,
+                                        незначительные трещины до 5мм. Комплектуется заводской или фирменной эко
+                                        коробкой by Breezy и кабелем. 100% протестировано, все функции работают!
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="rate_slider_img">
+                                <img src="../../img/grade-c-desktop.png" alt="C grade image" width="325"
+                                     class="js_zoom_img"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="video-modal" class="grades__video video">
+            <div class="video__window">
+                <button class="video__close" id="video-close">
+                    <img src="../../img/close.svg" alt="close button">
+                </button>
+                <div id="video-header" class="video__header">
+                    <div class="video__grade">A+</div>
+                    <div class="video__description">Как новый</div>
+                </div>
+
+                <div id="video-grade" class="video__container">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="stores-section" class="stores">
     <div class="stores__container">
         <div class="stores__top">
             <p class="stores__title">Where to Buy</p>
@@ -334,7 +505,6 @@ _.template(require('./../includes/top-side.html').default)(data) %>
                 Pre-Owned devices and the amount is still growing!</p>
         </div>
     </div>
-    <!--    BUTTONS-->
     <div class="stores__locations locations">
         <ul class="locations__list">
             <li data-country="all" class="locations__item locations__item-active">
@@ -359,20 +529,9 @@ _.template(require('./../includes/top-side.html').default)(data) %>
 
     <div class="stores__container">
         <div class="stores__bottom">
-            <!--                ul>li-->
-
             <ul class="locations__cards" id="stores">
-                <!--                    <li class="locations__card  card">-->
-                <!--                        <div class="card__logo">-->
-                <!--                            <img src="../../img/logo.svg" alt="">-->
-                <!--                        </div>-->
-                <!--                        <p class="card__description">Short description of this item that focuses on the benefits or-->
-                <!--                            success it brings your customer.</p>-->
-                <!--                        <a href="https://www.breezy.by" class="card__website" target="_blank" rel="noopener noreferrer">www.breezy.by</a>-->
-                <!--                    </li>-->
+
             </ul>
-
-
             <div class="stores__reseller reseller">
                 <p class="reseller__title">Do you want to become our next reseller?</p>
                 <button data-contact class="reseller__button">Become a reseller</button>
@@ -384,25 +543,25 @@ _.template(require('./../includes/top-side.html').default)(data) %>
     <div class="about__container">
         <div class="about__content">
             <p class="about__title">Who We Are</p>
-            <p class="about__description">Breezy – часть международного холдинга <span
-                    class="about__description-accent">ASBIS</span>, дистрибьютора IT-продуктов в более чем 75
+            <p class="about__description">Breezy – часть международного холдинга <a
+                    class="about__link" href="#" target="_blank">ASBIS</a>, дистрибьютора IT-продуктов в более чем 75
                 странах по
                 всему миру. Наша миссия – быть тем самым хорошим знакомым, который создает лучшие условия для обмена и
                 покупки гаджетов, давая им вторую жизнь.</p>
-            <!--            ul>li>a>img-->
+
             <ul class="about__social social">
                 <li class="social__item">
-                    <a href="" class="social__link">
+                    <a href="#" class="social__link" target="_blank">
                         <img src="../../img/fb.svg" alt="facebook icon">
                     </a>
                 </li>
                 <li class="social__item">
-                    <a href="" class="social__link">
+                    <a href="#" class="social__link" target="_blank">
                         <img src="../../img/twitter.svg" alt="twitter icon">
                     </a>
                 </li>
                 <li class="social__item">
-                    <a href="" class="social__link">
+                    <a href="#" class="social__link" target="_blank">
                         <img src="../../img/linkedin.svg" alt="linkedin icon">
                     </a>
                 </li>
@@ -410,6 +569,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
         </div>
     </div>
 </section>
+
 <section class="faq">
     <div class="faq__container">
         <div class="faq__content">
@@ -520,6 +680,7 @@ _.template(require('./../includes/top-side.html').default)(data) %>
         </div>
     </div>
 </section>
+
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__content">
@@ -573,29 +734,31 @@ _.template(require('./../includes/top-side.html').default)(data) %>
 <div id="modal" class="modal">
     <div class="modal__window">
         <div class="modal__container">
-            <p class="modal__title">Curious? Let's talk.</p>
             <button class="modal__close" id="modal-close">
                 <img src="../../img/close.svg" alt="close button">
             </button>
+            <p class="modal__title">Curious? Let's talk.</p>
             <form class="modal__form">
                 <div class="modal__top">
-                    <label class="modal__label" for="name">Name
-                        <input class="modal__input" type="text" id="name" required>
+                    <div class="modal__name">
+                        <label class="modal__label" for="name">Name
+                            <input class="modal__input" type="text" id="name" required>
+                        </label>
+
+                        <label class="modal__label" for="surname">Last name
+                            <input class="modal__input" type="text" id="surname" required>
+                        </label>
+                    </div>
+
+                    <label class="modal__label" for="email">Work e-mail
+                        <input class="modal__input" type="email" id="email" required>
                     </label>
 
-                    <label class="modal__label" for="surname">Last name
-                        <input class="modal__input" type="text" id="surname" required>
+
+                    <label class="modal__label" for="message">Message
+                        <textarea class="modal__input" id="message" rows="4" required></textarea>
                     </label>
                 </div>
-
-                <label class="modal__label" for="email">Work e-mail
-                    <input class="modal__input" type="email" id="email" required>
-                </label>
-
-
-                <label class="modal__label" for="message">Message
-                    <textarea class="modal__input" id="message" rows="4" required></textarea>
-                </label>
 
                 <div class="modal__button">
                     <button id="modal-submit" class="modal__submit" type="submit">Send message</button>
@@ -613,6 +776,8 @@ _.template(require('./../includes/top-side.html').default)(data) %>
         </div>
     </div>
 </div>
+
+
 
 
 <%=

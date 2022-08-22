@@ -1,0 +1,292 @@
+.hero {
+
+  &__container {
+    max-width: 1200px;
+    padding: 0 36px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+  }
+
+  &__content {
+    padding: 216px 0 247px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 79px;
+    color: $clr_primary;
+    margin-bottom: 16px;
+    max-width: 580px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 35px;
+    color: $clr_secondary;
+    max-width: 490px;
+    margin-bottom: 48px;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 6px;
+    background-color: $clr_accent;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $clr_white;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $clr_hover;
+    }
+  }
+
+  &__illustration {
+    width: 100%;
+  }
+
+  &__img {
+    max-width: 595px;
+    min-width: 480px;
+    width: 100%;
+    position: absolute;
+    top: 37px;
+    right: -1px;
+    z-index: -1;
+  }
+
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 218px;
+    padding: 16px 20px;
+    background-color: $clr_white;
+    border-radius: 16px;
+    box-shadow: 0 34px 38px rgba(0, 0, 0, 0.05);
+
+    &__img {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+    }
+
+    &__description {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      top: 430px;
+      right: 433px;
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      top: 245px;
+      right: -40px;
+    }
+
+    &:nth-child(4) {
+      position: absolute;
+      top: 750px;
+      right: 390px;
+    }
+
+    &:nth-child(5) {
+      position: absolute;
+      top: 553px;
+      right: -6px;
+    }
+  }
+
+  @media screen and (max-width: 1365px) {
+    &__content {
+      padding: 170px 0 247px 0;
+    }
+
+    &__img {
+      max-width: 478px;
+      top: 32px;
+      right: 23px;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 66px;
+    }
+
+    &__description {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    .feature {
+
+      &:nth-child(2) {
+        top: 365px;
+        right: 322px;
+      }
+
+      &:nth-child(3) {
+        top: 185px;
+        right: 34px;
+      }
+
+      &:nth-child(4) {
+        top: 613px;
+        right: 312px;
+      }
+
+      &:nth-child(5) {
+        top: 409px;
+        right: 34px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    &__container {
+      position: static;
+      flex-direction: column;
+    }
+
+    &__content {
+      padding: 32px 0 0 0;
+    }
+
+    &__title {
+      max-width: 100%;
+    }
+
+    &__description {
+      max-width: 100%;
+    }
+
+    &__button {
+      margin-bottom: 60px;
+    }
+
+    &__illustration {
+      position: relative;
+    }
+
+    &__img {
+      position: static;
+      margin: 0 auto;
+      max-width: 596px;
+    }
+
+    .feature {
+
+      &:nth-child(2) {
+        top: 393px;
+        right: 477px;
+      }
+
+      &:nth-child(3) {
+        top: 207px;
+        right: 4px;;
+      }
+
+      &:nth-child(4) {
+        top: 713px;
+        right: 435px;
+      }
+
+      &:nth-child(5) {
+        top: 515px;
+        right: 39px;
+      }
+    }
+
+
+  }
+  @media screen and (max-width: 767px) {
+
+    &__container {
+      padding: 0 16px;
+    }
+
+    &__content {
+      padding: 16px 0 0 0;
+    }
+
+    &__title {
+      max-width: 500px;
+      font-size: 36px;
+      line-height: 42px;
+    }
+
+    &__description {
+      max-width: 500px;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+
+    &__button {
+      padding: 8px 24px;
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
+    &__illustration {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    &__img {
+      max-width: 288px;
+      min-width: initial;
+    }
+
+    .feature {
+      max-width: 156px;
+      padding: 8px;
+      border-radius: 8px;
+      gap: 8px;
+
+      &__img {
+        width: 24px;
+        height: 24px;
+      }
+
+      &__description {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      &:nth-child(2) {
+        top: 192px;
+        right: 109px;
+      }
+
+      &:nth-child(3) {
+        top: 73px;
+        right: 10px;
+      }
+
+      &:nth-child(4) {
+        top: 362px;
+        right: 106px;
+      }
+
+      &:nth-child(5) {
+        top: 277px;
+        right: -9px;
+      }
+
+    }
+  }
+}

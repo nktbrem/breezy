@@ -1,0 +1,110 @@
+.faq {
+  &__container {
+    max-width: 1008px;
+    padding: 0 36px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding: 120px 0 160px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 76px;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .accordion {
+
+    &__item {
+      border: 1px solid $clr_border;
+      border-radius: 16px;
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__title {
+      padding: 24px 76px 24px 24px;
+      font-weight: 700;
+      font-size: 24px;
+      //min-height: 70px;
+      line-height: 34px;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: url("../img/arrow.svg");
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        //top: calc(50% - 10px);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &-active::after {
+        transform: translateY(-50%) rotate(-180deg);
+      }
+    }
+
+    &__body {
+      max-height: 0;
+      overflow: hidden;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 35px;
+      transition: max-height 0.3s ease-out;
+    }
+
+    &__content {
+      padding: 12px 24px 24px 24px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    &__content {
+      padding: 120px 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    &__container {
+      padding: 0 16px;
+    }
+
+
+    &__content {
+      padding: 60px 0;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 16px;
+    }
+
+    .accordion {
+
+      &__title {
+        padding: 16px 68px 16px 16px;
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      &__body {
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      &__content {
+        padding: 0 16px 16px 16px;
+      }
+    }
+  }
+}

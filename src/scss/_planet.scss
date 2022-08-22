@@ -1,0 +1,140 @@
+.planet {
+
+  &__container {
+    max-width: 996px;
+    padding: 0 36px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding: 0 0 166px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 76px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: $clr_secondary;
+    max-width: 770px;
+    margin: 0 auto;
+  }
+
+  &__features {
+    margin: 0 auto;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__title {
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 56px;
+      text-align: center;
+
+      &-accent {
+        color: $clr_accent;
+      }
+    }
+
+    &__description {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+      color: $clr_secondary;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    &__content {
+      padding: 0 0 120px 0;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__description {
+      text-align: left;
+      max-width: 600px;
+      margin: 0 0 56px 0;
+    }
+
+    &__img {
+      margin-bottom: 10px;
+    }
+
+    &__features {
+      max-width: 430px;
+    }
+
+    .list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      gap: 120px 72px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    &__container {
+      padding: 0 16px;
+    }
+
+    &__content {
+      padding: 0 0 120px 0;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 38px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 0 30px 0;
+    }
+
+    &__img {
+      margin-bottom: 26px;
+    }
+
+    .list {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      gap: 48px;
+
+      &__item {
+        width: 100%;
+      }
+
+      &__title {
+        font-size: 48px;
+        line-height: 48px;
+      }
+
+      &__description {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+}

@@ -11,15 +11,12 @@
     <meta name="designer" content="" />
     <meta name="HandheldFriendly" content="True" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../../img/faviconV2.png" />
-
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="libs/select2/select2.css" />
     <link rel="stylesheet" href="css/style.bundle.css" />
   </head>
-  <body class="site dark">
+  <body>
     <header class="header">
       <div class="header__container">
         <div class="header__content">
@@ -32,7 +29,7 @@
                 <a href="#" class="menu__link menu__link-active">Refurbished</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Where to buy</a>
+                <a href="#stores-section" class="menu__link">Where to buy</a>
               </li>
               <li class="menu__item">
                 <a href="#" class="menu__link">Contacts</a>
@@ -42,14 +39,87 @@
               </li>
             </ul>
           </nav>
+          <div class="header__controls">
+            <div class="header__languages languages">
+              <div id="languages-btn" class="languages__select">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.79128 0.837C7.38664 0.590447 7.9997 0.397826 8.62319 0.259851L8.6449 0.25507C10.1196 -0.0681507 11.6521 -0.085842 13.1464 0.211451C13.2042 0.222945 13.2618 0.234896 13.3193 0.247301C13.3551 0.253177 13.3903 0.260977 13.4249 0.270621C15.4504 0.728383 17.3071 1.75074 18.7782 3.22183C20.3164 4.7601 21.3641 6.71996 21.7886 8.85359C22.213 10.9872 21.9954 13.1988 21.163 15.2087C20.3307 17.2186 18.921 18.9366 17.1123 20.1454C15.7634 21.047 14.2378 21.6351 12.6469 21.876C12.5862 21.8906 12.524 21.8996 12.461 21.9025C11.9791 21.9671 11.4917 21.9999 11.0017 22C10.5056 22.0001 10.0111 21.9666 9.52164 21.9002C9.48411 21.8971 9.44694 21.8918 9.41027 21.8845C8.51283 21.7534 7.633 21.5116 6.79128 21.163C5.45639 20.6102 4.24348 19.7998 3.22183 18.7782C2.20018 17.7565 1.3898 16.5436 0.836995 15.2087C0.746404 14.99 0.663021 14.7686 0.586917 14.5451C0.559533 14.484 0.538108 14.4196 0.523381 14.3527C0.176944 13.2701 -0.000178761 12.1386 0 10.9983C0.000179027 9.85755 0.177719 8.73028 0.520854 7.65523C0.5365 7.5798 0.560641 7.50749 0.592234 7.43933C0.899072 6.54244 1.32217 5.68422 1.85455 4.88766C3.06338 3.07898 4.78136 1.66935 6.79128 0.837ZM13.9284 19.5103C14.6567 19.2596 15.3537 18.9152 16.001 18.4826C17.2683 17.6356 18.2962 16.4831 18.993 15.1367H14.9272C14.6936 16.6142 14.3601 18.0754 13.9284 19.5103ZM12.9007 15.1367C12.6243 16.7768 12.2165 18.3946 11.6803 19.9743C11.4549 19.9913 11.2285 20 11.0014 20C10.78 20 10.5589 19.9919 10.3387 19.9757C9.80058 18.3911 9.39234 16.7729 9.11458 15.1367H12.9007ZM15.1814 13.1367H19.7427C20.0532 11.8661 20.0844 10.5375 19.827 9.24384C19.8013 9.11489 19.7729 8.9867 19.7417 8.85938H15.3192C15.3295 9.20252 15.3344 9.54596 15.3341 9.88958C15.3363 10.9755 15.2852 12.0591 15.1814 13.1367ZM13.3182 8.85938C13.3292 9.20227 13.3345 9.5455 13.3341 9.88891L13.3341 9.89218C13.3364 10.9775 13.2819 12.0605 13.1716 13.1367H8.84091C8.69288 11.7161 8.64198 10.287 8.68859 8.85938H13.3182ZM15.1987 6.85938H18.9909C18.5682 6.04354 18.0207 5.29283 17.364 4.63604C16.5543 3.82644 15.602 3.18294 14.5609 2.73442C14.86 4.09503 15.073 5.47276 15.1987 6.85938ZM12.3547 2.10254C12.7561 3.66533 13.0351 5.25575 13.1899 6.85938H8.81792C8.97267 5.26084 9.25054 3.67013 9.65205 2.10152C10.5446 1.96633 11.4557 1.96566 12.3547 2.10254ZM3.51736 5.99899C4.4844 4.55208 5.84971 3.41729 7.44714 2.73096C7.14758 4.09651 6.93502 5.47538 6.80913 6.85938H3.00905C3.16191 6.56437 3.33149 6.27709 3.51736 5.99899ZM2.25828 8.85938H6.68759C6.64378 10.2868 6.69161 11.7156 6.83073 13.1367H2.25732C2.08667 12.4385 1.99989 11.7207 2 10.9986C2.00011 10.2739 2.08771 9.55591 2.25828 8.85938ZM3.00703 15.1367H7.08771C7.32295 16.6132 7.65785 18.0768 8.092 19.5172C7.91164 19.4557 7.73305 19.3883 7.5565 19.3152C6.46431 18.8629 5.47193 18.1999 4.63604 17.364C3.9807 16.7086 3.43162 15.9571 3.00703 15.1367Z"
+                    fill="#808D9A"
+                  />
+                </svg>
+              </div>
 
-          <div class="header__buttons buttons">
-            <button class="buttons__lang">
-              <img src="../../img/globe.svg" alt="language selection button" />
+              <ul class="languages__list">
+                <li>
+                  <a class="languages__item languages__item-active" href="#">English</a>
+                </li>
+                <li>
+                  <a class="languages__item" href="#">Russian</a>
+                </li>
+              </ul>
+            </div>
+            <button data-contact class="header__contact">Get in touch</button>
+            <button id="burger-open" class="header__burger header__burger-show">
+              <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.5 1C0.5 0.447715 0.947715 0 1.5 0H24.5C25.0523 0 25.5 0.447715 25.5 1V1.5C25.5 2.05228 25.0523 2.5 24.5 2.5H1.5C0.947716 2.5 0.5 2.05228 0.5 1.5V1ZM0.5 9.75C0.5 9.19771 0.947715 8.75 1.5 8.75H24.5C25.0523 8.75 25.5 9.19771 25.5 9.75V10.25C25.5 10.8023 25.0523 11.25 24.5 11.25H1.5C0.947716 11.25 0.5 10.8023 0.5 10.25V9.75ZM1.5 17.5C0.947715 17.5 0.5 17.9477 0.5 18.5V19C0.5 19.5523 0.947716 20 1.5 20H24.5C25.0523 20 25.5 19.5523 25.5 19V18.5C25.5 17.9477 25.0523 17.5 24.5 17.5H1.5Z"
+                  fill="black"
+                />
+              </svg>
             </button>
-
-            <button id="header-btn" class="buttons__contact">Get in touch</button>
           </div>
+          <nav id="mobile-menu" class="header__mobile mobile">
+            <div class="mobile__container">
+              <div class="mobile__header">
+                <a class="mobile__logo" href="#">
+                  <img src="../../img/logo.svg" alt="Breezy reuse easy logo" />
+                </a>
+                <div class="mobile__controls">
+                  <button data-contact class="mobile__contact">Get in touch</button>
+                  <button id="burger-close" class="mobile__close">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.81317 1.18686C2.36407 0.737755 1.63593 0.737755 1.18683 1.18686C0.737724 1.63596 0.737724 2.3641 1.18683 2.8132L8.35754 9.98392L1.18683 17.1546C0.737724 17.6037 0.737724 18.3319 1.18683 18.781C1.63593 19.2301 2.36407 19.2301 2.81317 18.781L9.98389 11.6103L17.1546 18.7809C17.6037 19.23 18.3318 19.23 18.7809 18.7809C19.23 18.3318 19.23 17.6037 18.7809 17.1546L11.6102 9.98392L18.7809 2.81323C19.23 2.36413 19.23 1.63599 18.7809 1.18689C18.3318 0.737786 17.6037 0.737785 17.1546 1.18689L9.98389 8.35757L2.81317 1.18686Z"
+                        fill="black"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="mobile__content">
+                <div class="mobile__top">
+                  <ul class="mobile__list">
+                    <li class="mobile__item">
+                      <a href="#" class="mobile__link mobile__link-active">Refurbished</a>
+                    </li>
+                    <li class="mobile__item">
+                      <a data-anchor href="#stores-section" class="mobile__link">Where to buy</a>
+                    </li>
+                    <li class="mobile__item">
+                      <a href="#" class="mobile__link">Contacts</a>
+                    </li>
+                    <li class="mobile__item">
+                      <a href="#" class="mobile__link">Warranty</a>
+                    </li>
+                  </ul>
+                  <div class="mobile__languages">
+                    <a class="mobile__language mobile__language-active" href="#">EN</a>
+                    <a class="mobile__language" href="#">RU</a>
+                  </div>
+                </div>
+                <div class="mobile__bottom">
+                  <button data-contact class="mobile__button">Get in touch</button>
+                </div>
+              </div>
+            </div>
+          </nav>
         </div>
       </div>
     </header>
@@ -64,45 +134,45 @@
           </p>
           <a href="" class="hero__button">Where to buy</a>
         </div>
-        <!--		<div class="hero__illustration">-->
-        <!--			<div class="hero__img">-->
-        <!--				<img src="../../img/hero-1.png" alt="Hero image" />-->
-        <!--			</div>-->
-        <!--			<div class="hero__feature feature">-->
-        <!--				<div class="feature__img">-->
-        <!--					<img src="../../img/medal.svg" alt="" />-->
-        <!--				</div>-->
-
-        <!--				<p class="feature__description">На 100% готов к использованию</p>-->
-        <!--			</div>-->
-        <!--			<div class="hero__feature feature">-->
-        <!--				<div class="feature__img">-->
-        <!--					<img src="../../img/medal.svg" alt="" />-->
-        <!--				</div>-->
-        <!--				<p class="feature__description">Премиум качество в каждой детали</p>-->
-        <!--			</div>-->
-        <!--			<div class="hero__feature feature">-->
-        <!--				<div class="feature__img">-->
-        <!--					<img src="../../img/checklist.svg" alt="" />-->
-        <!--				</div>-->
-        <!--				<p class="feature__description">Качественный MFI кабель в комплекте</p>-->
-        <!--			</div>-->
-        <!--			<div class="hero__feature feature">-->
-        <!--				<div class="feature__img">-->
-        <!--					<img src="../../img/checklist.svg" alt="" />-->
-        <!--				</div>-->
-        <!--				<p class="feature__description">Гарантия качества и положительных эмоций</p>-->
-        <!--			</div>-->
-        <!--		</div>-->
+        <div class="hero__illustration">
+          <div class="hero__img">
+            <img src="../../img/hero1x.png" srcset="../../img/hero1x.png, ../../img/hero2x.png 2x" alt="Hero image" />
+          </div>
+          <div class="hero__feature feature">
+            <div class="feature__img">
+              <img src="../../img/medal.svg" alt="Feature image" />
+            </div>
+            <p class="feature__description">На 100% готов к использованию</p>
+          </div>
+          <div class="hero__feature feature">
+            <div class="feature__img">
+              <img src="../../img/medal.svg" alt="Feature image" />
+            </div>
+            <p class="feature__description">Премиум качество в каждой детали</p>
+          </div>
+          <div class="hero__feature feature">
+            <div class="feature__img">
+              <img src="../../img/checklist.svg" alt="Feature image" />
+            </div>
+            <p class="feature__description">Качественный MFI кабель в комплекте</p>
+          </div>
+          <div class="hero__feature feature">
+            <div class="feature__img">
+              <img src="../../img/checklist.svg" alt="Feature image" />
+            </div>
+            <p class="feature__description">Гарантия качества и положительных эмоций</p>
+          </div>
+        </div>
       </div>
     </section>
+
     <section class="features">
       <div class="features__container">
         <div class="features__content">
           <ul class="features__list">
             <li class="features__item">
               <div class="features__img">
-                <img src="../../img/medal.svg" alt="" />
+                <img src="../../img/medal.svg" alt="Feature image" />
               </div>
               <p class="features__title">Premium Quality</p>
               <p class="features__description">
@@ -111,7 +181,7 @@
             </li>
             <li class="features__item">
               <div class="features__img">
-                <img src="../../img/settings.svg" alt="" />
+                <img src="../../img/settings.svg" alt="Feature image" />
               </div>
               <p class="features__title">100% Original Parts</p>
               <p class="features__description">
@@ -120,7 +190,7 @@
             </li>
             <li class="features__item">
               <div class="features__img">
-                <img src="../../img/check.svg" alt="" />
+                <img src="../../img/check.svg" alt="Feature image" />
               </div>
               <p class="features__title">Strictest Control</p>
               <p class="features__description">
@@ -142,17 +212,22 @@
           <div class="process__video video">
             <div class="video__container">
               <iframe
+                id="video-iframe"
                 class="video__iframe"
                 src="https://www.youtube.com/embed/jfKfPfyJRdk"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               ></iframe>
-              <div class="video__thumbnail">
-                <img src="../../img/thumbnail.png" alt="" />
+              <div id="video-thumbnail" class="video__thumbnail">
+                <img
+                  src="../../img/thumbnail1x.png"
+                  srcset="../../img/thumbnail1x.png, ../../img/thumbnail2x.png 2x"
+                  alt="Video thumbnail"
+                />
               </div>
-              <button class="video__button">
-                <img src="../../img/play.svg" alt="" />
+              <button id="video-play" class="video__button">
+                <img src="../../img/play.svg" alt="Play button" />
               </button>
             </div>
           </div>
@@ -169,9 +244,8 @@
             почти не отличается от нового, но при этом гораздо выгоднее.
           </p>
           <div class="buy__img">
-            <img src="../../img/buy.png" alt="" />
+            <img src="../../img/buy1x.png" srcset="../../img/buy1x.png, ../../img/buy2x.png 2x" alt="Buy smart image" />
           </div>
-
           <ul class="buy__list list">
             <li class="list__item">14 дней на возврат и обмен</li>
             <li class="list__item">В среднем на 30% дешевле нового*</li>
@@ -180,11 +254,16 @@
         </div>
       </div>
     </section>
+
     <section class="quality">
       <div class="quality__container">
         <div class="quality__content">
           <div class="quality__img">
-            <img src="../../img/quality.png" alt="" />
+            <img
+              src="../../img/quality1x.png"
+              srcset="../../img/quality1x.png, ../../img/quality2x.png 2x"
+              alt="Quality image"
+            />
           </div>
           <div class="quality__info">
             <p class="quality__title">Чувствуй качество</p>
@@ -202,6 +281,7 @@
         </div>
       </div>
     </section>
+
     <section class="emotions">
       <div class="emotions__container">
         <div class="emotions__content">
@@ -218,11 +298,16 @@
             </ul>
           </div>
           <div class="emotions__img">
-            <img src="../../img/emotions.png" alt="" />
+            <img
+              src="../../img/emotions1x.png"
+              srcset="../../img/emotions1x.png, ../../img/emotions2x.png 2x"
+              alt="Emotions image"
+            />
           </div>
         </div>
       </div>
     </section>
+
     <section class="planet">
       <div class="planet__container">
         <div class="planet__content">
@@ -233,44 +318,234 @@
             минимизируешь выбросы в атмосферу, тем самым спасаешь планету!
           </p>
           <div class="planet__img">
-            <img src="../../img/save-planet.png" alt="" />
+            <img
+              src="../../img/save1x.png"
+              srcset="../../img/save1x.png 1x, ../../img/save2x.png 2x"
+              alt="Save the planet image"
+            />
           </div>
-
-          <ul class="planet__list list">
-            <li class="list__item">
-              <p class="list__title">100<span class="list__title-accent">%</span></p>
-              <p class="list__description">Экологическая упаковка</p>
-            </li>
-            <li class="list__item">
-              <p class="list__title">-70<span class="list__title-accent">kg</span></p>
-              <p class="list__description">Выбросы CO2</p>
-            </li>
-            <li class="list__item">
-              <p class="list__title">-100<span class="list__title-accent">l</span></p>
-              <p class="list__description">Расход воды</p>
-            </li>
-            <li class="list__item">
-              <p class="list__title">-137<span class="list__title-accent">kg</span></p>
-              <p class="list__description">Расход сырья</p>
-            </li>
-          </ul>
+          <div class="planet__features">
+            <ul class="planet__list list">
+              <li class="list__item">
+                <p class="list__title">100<span class="list__title-accent">%</span></p>
+                <p class="list__description">Экологическая упаковка</p>
+              </li>
+              <li class="list__item">
+                <p class="list__title">-70<span class="list__title-accent">kg</span></p>
+                <p class="list__description">Выбросы CO2</p>
+              </li>
+              <li class="list__item">
+                <p class="list__title">-100<span class="list__title-accent">l</span></p>
+                <p class="list__description">Расход воды</p>
+              </li>
+              <li class="list__item">
+                <p class="list__title">-137<span class="list__title-accent">kg</span></p>
+                <p class="list__description">Расход сырья</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
-    <section class="stores">
+
+    <section class="grades">
+      <div class="grades__container">
+        <div class="rate">
+          <div class="wrap">
+            <p class="title">Выбирай сам</p>
+            <div class="rate_slider_nav">
+              <div class="rate_slider_nav_item">A+</div>
+              <div class="rate_slider_nav_item">A</div>
+              <div class="rate_slider_nav_item">B</div>
+              <div class="rate_slider_nav_item">C</div>
+            </div>
+            <div class="rate_slider">
+              <div class="rate_slider_slide">
+                <div class="rate_slider_wrap">
+                  <div class="rate_slider_side">
+                    <div class="rate_slider_cont">
+                      <img src="../../img/grade-aa-mob.png" alt="AA grade image" class="rate_slider_mob_img" />
+                      <div class="rate_slider_condition__mob">
+                        <button data-grade="aa" class="btn btn_violet">
+                          <img src="../../img/play-small.svg" alt="Play button" />
+                          <span class="rate_slider_condition-text">Видеообзор</span>
+                        </button>
+                      </div>
+                      <div class="rate_slider_info">
+                        <p class="rate_slider_val">A+</p>
+                        <div class="rate_slider_condition">
+                          <button data-grade="aa" class="btn btn_violet">
+                            <img src="../../img/play-small.svg" alt="Play button" />
+                            <span class="rate_slider_condition-text">Видеообзор</span>
+                          </button>
+                        </div>
+                      </div>
+                      <p class="rate_slider_text text">
+                        Устройство как новое. Возможны единичные микроцарапины. Возможна замена компонентов в целях
+                        восстановления. Комплектуется заводской или фирменной эко коробкой by Breezy и кабелем. 100%
+                        протестировано, все функции работают!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="rate_slider_img">
+                    <img src="../../img/grade-aa-desktop.png" alt="AA grade image" width="325" class="js_zoom_img" />
+                  </div>
+                </div>
+              </div>
+              <div class="rate_slider_slide">
+                <div class="rate_slider_wrap">
+                  <div class="rate_slider_side">
+                    <div class="rate_slider_cont">
+                      <img src="../../img/grade-a-mob.png" alt="A grade image" class="rate_slider_mob_img" />
+                      <div class="rate_slider_condition__mob">
+                        <button data-grade="a" class="btn btn_violet">
+                          <img src="../../img/play-small.svg" alt="Play button" />
+                          <span class="rate_slider_condition-text">Видеообзор</span>
+                        </button>
+                      </div>
+                      <div class="rate_slider_info">
+                        <div class="rate_slider_val">A</div>
+                        <div class="rate_slider_condition">
+                          <button data-grade="a" class="btn btn_violet">
+                            <img src="../../img/play-small.svg" alt="Play button" />
+                            <span class="rate_slider_condition-text">Видеообзор</span>
+                          </button>
+                        </div>
+                      </div>
+                      <p class="rate_slider_text text">
+                        Устройство в отличном состоянии. Возможны единичные микроцарапины на дисплее и мелкие царапины
+                        на боковых гранях корпуса. Возможна замена компонентов в целях восстановления. Комплектуется
+                        заводской или фирменной эко коробкой by Breezy и кабелем. 100% протестировано, все функции
+                        работают!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="rate_slider_img">
+                    <img src="../../img/grade-a-desktop.png" alt="A grade image" width="325" class="js_zoom_img" />
+                  </div>
+                </div>
+              </div>
+              <div class="rate_slider_slide">
+                <div class="rate_slider_wrap">
+                  <div class="rate_slider_side">
+                    <div class="rate_slider_cont">
+                      <img src="../../img/grade-b-mob.png" alt="B grade image" class="rate_slider_mob_img" />
+                      <div class="rate_slider_condition__mob">
+                        <button data-grade="b" class="btn btn_violet">
+                          <img src="../../img/play-small.svg" alt="Play button" />
+                          <span class="rate_slider_condition-text">Видеообзор</span>
+                        </button>
+                      </div>
+                      <div class="rate_slider_info">
+                        <div class="rate_slider_val">B</div>
+                        <div class="rate_slider_condition">
+                          <button data-grade="b" class="btn btn_violet">
+                            <img src="../../img/play-small.svg" alt="Play button" />
+                            <span class="rate_slider_condition-text">Видеообзор</span>
+                          </button>
+                        </div>
+                      </div>
+                      <p class="rate_slider_text text">
+                        Устройство в хорошем состоянии. Возможны мелкие царапины, потертости. Возможна замена
+                        компонентов в целях восстановления. Комплектуется заводской или фирменной эко коробкой by Breezy
+                        и кабелем. 100% протестировано, все функции работают!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="rate_slider_img">
+                    <img src="../../img/grade-b-desktop.png" alt="B grade image" width="325" class="js_zoom_img" />
+                  </div>
+                </div>
+              </div>
+              <div class="rate_slider_slide">
+                <div class="rate_slider_wrap">
+                  <div class="rate_slider_side">
+                    <div class="rate_slider_cont">
+                      <img src="../../img/grade-c-mob.png" alt="C grade image" class="rate_slider_mob_img" />
+                      <div class="rate_slider_condition__mob">
+                        <button data-grade="c" class="btn btn_violet">
+                          <img src="../../img/play-small.svg" alt="Play button" />
+                          <span class="rate_slider_condition-text">Видеообзор</span>
+                        </button>
+                      </div>
+                      <div class="rate_slider_info">
+                        <div class="rate_slider_val">B</div>
+                        <div class="rate_slider_condition">
+                          <button data-grade="c" class="btn btn_violet">
+                            <img src="../../img/play-small.svg" alt="Play button" />
+                            <span class="rate_slider_condition-text">Видеообзор</span>
+                          </button>
+                        </div>
+                      </div>
+                      <p class="rate_slider_text text">
+                        Устройство со значительными следами эксплуатации. На дисплее возможны незначительные засветы,
+                        глубокие царапины. Корпус может иметь следы ударов, незначительные трещины до 5мм. Комплектуется
+                        заводской или фирменной эко коробкой by Breezy и кабелем. 100% протестировано, все функции
+                        работают!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="rate_slider_img">
+                    <img src="../../img/grade-c-desktop.png" alt="C grade image" width="325" class="js_zoom_img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="video-modal" class="grades__video video">
+          <div class="video__window">
+            <button class="video__close" id="video-close">
+              <img src="../../img/close.svg" alt="close button" />
+            </button>
+            <div id="video-header" class="video__header">
+              <div class="video__grade">A+</div>
+              <div class="video__description">Как новый</div>
+            </div>
+
+            <div id="video-grade" class="video__container"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stores-section" class="stores">
       <div class="stores__container">
-        <div class="stores__content">
+        <div class="stores__top">
           <p class="stores__title">Where to Buy</p>
           <p class="stores__description">
             The following resellers discovered Breezy! The best choice for Pre-Owned devices and the amount is still
             growing!
           </p>
+        </div>
+      </div>
+      <div class="stores__locations locations">
+        <ul class="locations__list">
+          <li data-country="all" class="locations__item locations__item-active">
+            <p class="locations__name">All</p>
+          </li>
+          <li data-country="ukr" class="locations__item">
+            <p class="locations__name">Ukraine</p>
+          </li>
+          <li data-country="blr" class="locations__item">
+            <p class="locations__name">Belarus</p>
+          </li>
+          <li data-country="kz" class="locations__item">
+            <p class="locations__name">Kazakhstan</p>
+          </li>
+          <li data-country="cpr" class="locations__item">
+            <p class="locations__name">Cyprus</p>
+          </li>
+        </ul>
+      </div>
 
-          <!--    BUTTONS-->
-
+      <div class="stores__container">
+        <div class="stores__bottom">
+          <ul class="locations__cards" id="stores"></ul>
           <div class="stores__reseller reseller">
             <p class="reseller__title">Do you want to become our next reseller?</p>
-            <button id="stores-btn" class="reseller__button">Become a reseller</button>
+            <button data-contact class="reseller__button">Become a reseller</button>
           </div>
         </div>
       </div>
@@ -280,31 +555,32 @@
         <div class="about__content">
           <p class="about__title">Who We Are</p>
           <p class="about__description">
-            Breezy – часть международного холдинга <span class="about__description-accent">ASBIS</span>, дистрибьютора
-            IT-продуктов в более чем 75 странах по всему миру. Наша миссия – быть тем самым хорошим знакомым, который
-            создает лучшие условия для обмена и покупки гаджетов, давая им вторую жизнь.
+            Breezy – часть международного холдинга <a class="about__link" href="#" target="_blank">ASBIS</a>,
+            дистрибьютора IT-продуктов в более чем 75 странах по всему миру. Наша миссия – быть тем самым хорошим
+            знакомым, который создает лучшие условия для обмена и покупки гаджетов, давая им вторую жизнь.
           </p>
-          <!--            ul>li>a>img-->
+
           <ul class="about__social social">
             <li class="social__item">
-              <a href="" class="social__link">
-                <img src="../../img/fb.svg" alt="" />
+              <a href="#" class="social__link" target="_blank">
+                <img src="../../img/fb.svg" alt="facebook icon" />
               </a>
             </li>
             <li class="social__item">
-              <a href="" class="social__link">
-                <img src="../../img/twitter.svg" alt="" />
+              <a href="#" class="social__link" target="_blank">
+                <img src="../../img/twitter.svg" alt="twitter icon" />
               </a>
             </li>
             <li class="social__item">
-              <a href="" class="social__link">
-                <img src="../../img/linkedin.svg" alt="" />
+              <a href="#" class="social__link" target="_blank">
+                <img src="../../img/linkedin.svg" alt="linkedin icon" />
               </a>
             </li>
           </ul>
         </div>
       </div>
     </section>
+
     <section class="faq">
       <div class="faq__container">
         <div class="faq__content">
@@ -393,6 +669,7 @@
         </div>
       </div>
     </section>
+
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__content">
@@ -424,17 +701,17 @@
           <ul class="footer__social social">
             <li class="social__item">
               <a href="" class="social__link">
-                <img src="../../img/fb-gray.svg" alt="" />
+                <img src="../../img/fb-gray.svg" alt="facebook icon" />
               </a>
             </li>
             <li class="social__item">
               <a href="" class="social__link">
-                <img src="../../img/twitter-gray.svg" alt="" />
+                <img src="../../img/twitter-gray.svg" alt="twitter icon" />
               </a>
             </li>
             <li class="social__item">
               <a href="" class="social__link">
-                <img src="../../img/linkedin-gray.svg" alt="" />
+                <img src="../../img/linkedin-gray.svg" alt="linkedin icon" />
               </a>
             </li>
           </ul>
@@ -445,91 +722,55 @@
 
     <div id="modal" class="modal">
       <div class="modal__window">
-        <p class="modal__title">Curious? Let's talk.</p>
-        <button class="modal__close" id="modal-close">
-          <img src="../../img/close.svg" alt="" />
-        </button>
-        <form class="modal__form">
-          <div class="modal__top">
-            <label class="modal__label" for="name"
-              >Name
-              <input class="modal__input" type="text" id="name" required />
-            </label>
+        <div class="modal__container">
+          <button class="modal__close" id="modal-close">
+            <img src="../../img/close.svg" alt="close button" />
+          </button>
+          <p class="modal__title">Curious? Let's talk.</p>
+          <form class="modal__form">
+            <div class="modal__top">
+              <div class="modal__name">
+                <label class="modal__label" for="name"
+                  >Name
+                  <input class="modal__input" type="text" id="name" required />
+                </label>
 
-            <label class="modal__label" for="surname"
-              >Last name
-              <input class="modal__input" type="text" id="surname" required />
-            </label>
+                <label class="modal__label" for="surname"
+                  >Last name
+                  <input class="modal__input" type="text" id="surname" required />
+                </label>
+              </div>
+
+              <label class="modal__label" for="email"
+                >Work e-mail
+                <input class="modal__input" type="email" id="email" required />
+              </label>
+
+              <label class="modal__label" for="message"
+                >Message
+                <textarea class="modal__input" id="message" rows="4" required></textarea>
+              </label>
+            </div>
+
+            <div class="modal__button">
+              <button id="modal-submit" class="modal__submit" type="submit">Send message</button>
+            </div>
+          </form>
+          <div class="modal__complete complete complete-hidden">
+            <div class="complete__container">
+              <div class="complete__img">
+                <img src="../../img/complete.svg" alt="Complete image" />
+              </div>
+              <p class="complete__description">Thanks for contacting us!</p>
+              <p class="complete__description">We will get in touch with you shortly.</p>
+            </div>
           </div>
-
-          <label class="modal__label" for="email"
-            >Work e-mail
-            <input class="modal__input" type="email" id="email" required />
-          </label>
-
-          <label class="modal__label" for="message"
-            >Message
-            <textarea class="modal__input" id="message" rows="4" required></textarea>
-          </label>
-
-          <div class="modal__button">
-            <button id="modal-submit" class="modal__submit" type="submit">Send message</button>
-          </div>
-        </form>
-        <div class="modal__complete complete complete-hidden">
-          <div class="complete__img">
-            <img src="../../img/complete.svg" alt="" />
-          </div>
-          <p class="complete__description">Thanks for contacting us!</p>
-          <p class="complete__description">We will get in touch with you shortly.</p>
         </div>
       </div>
     </div>
 
-    <!--<label class="modal__label" for="name">Name</label>-->
-    <!--<input class="modal__input" type="text" id="name" required>-->
-
-    <!--<label class="modal__label" for="surname">Last name</label>-->
-    <!--<input class="modal__input" type="text" id="surname" required>-->
-
-    <!--<label class="modal__label" for="email">Work e-mail</label>-->
-    <!--<input class="modal__input" type="email" id="email" required>-->
-
-    <!--<label class="modal__label" for="message">Message</label>-->
-    <!--<textarea class="modal__input" id="message" rows="4" required></textarea>-->
-
-    <!--<label class="modal__label" for="name">Name<input class="modal__input" type="text" id="name" required></label>-->
-
-    <!--<label class="modal__label" for="surname">Last name<input class="modal__input" type="text" id="surname" required></label>-->
-
-    <!--<label class="modal__label" for="email">Work e-mail<input class="modal__input" type="email" id="email" required></label>-->
-
-    <!--<label class="modal__label" for="message">Message<textarea class="modal__input" id="message" rows="4" required></textarea></label>-->
-
-    <script src="libs/jquery/jquery-3.5.1.js"></script>
-    <script src="libs/select2/select2.js"></script>
-    <script src="libs/jquery.inputmask/jquery.inputmask.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/bundle.js"></script>
-    <script>
-      // let nom = JSON.parse(JSON.stringify({"samsung":["Galaxy Z Flip Samsung","Galaxy Z Fold 2 (F916) Samsung","Galaxy Fold 12\/512GB Samsung","N985F Samsung","N980F Samsung","N970F Samsung","N975F Samsung","N770F Samsung","N960F Samsung 512GB","N960F Samsung","N950F Samsung","N930F Samsung","N920C 32GB Samsung","N915F Samsung","N910H Samsung","N9000 Samsung","N7100 TAD Samsung","G988B Samsung","G985F Samsung","G980F Gray Samsung","G780F Samsung","G975F 1tb ceramic Samsung","G975F 512gb Samsung","G975F Samsung","G973F Samsung","G970F Samsung","G770F Samsung","G965F Samsung","G960F Samsung","G955F Samsung","G950F Samsung","G935F 32Gb Samsung","G930F DS 32GB Samsung","G928F 32Gb Samsung","G928F 64Gb Samsung","G925F 32Gb Samsung","G925F 64Gb Samsung","G920F DS 64GB Samsung","G920F SS 64GB Samsung","G920F DS 32GB Samsung","G920F SS 32GB Samsung","G900F DUOS Samsung","G900H Samsung","G800H Samsung","I9500 Samsung","I9300i Samsung","I9192 Samsung","I8160 Samsung","A015F Samsung","A105F Samsung","A107F Samsung","A115F Samsung","A205F Samsung","A207F Samsung","A217F Samsung","A300H Samsung","A305F Samsung (64gb)","A305F Samsung (32gb)","A307F Samsung (64gb)","A307F Samsung (32gb)","A315F Samsung (128gb)","A315F Samsung (64gb)","A310F Samsung","A320F Samsung","A405F Samsung","A415F Samsung","A500H Samsung","A510F Samsung","A505FM Samsung (128GB)","A505FN Samsung (64gb)","A515F Samsung (64gb)","A515F Samsung (128gb)","A520F Samsung","A530F Samsung","A600F Samsung","A605F Samsung","A500H Samsung","A705F Samsung","A710F Samsung","A720F Samsung","A730F Samsung","A750F Samsung","A715F Samsung","A805F Samsung","A920F Samsung","J105h Samsung","J110 Samsung","J120H Samsung","J200 Samsung","J250F Samsung","J260F Samsung","J320H Samsung","J330F Samsung","J400F Samsung","J415F Samsung","G570F Samsung","J500H Samsung","J510H Samsung","J530F Samsung","J600F Samsung","J610F Samsung","J500H Samsung","J701F Samsung","J710F Samsung","J730F Samsung","J810F Samsung","M105G Samsung","M205F Samsung","M307F Samsung","M315F Samsung","E500H Samsung","G130E Samsung","G350 Samsung","G355H Samsung","G360H Samsung","G361H Samsung","G530H Samsung","G531 Samsung","G532 samsung ","G850F Samsung","I8552 Samsung","S7262 Samsung","S7272 Samsung","S7390 Samsung","S5260 Samsung","G7102 Samsung"],"apple":["iPhone 12 Pro Max 512Gb","iPhone 12 Pro Max 256Gb","iPhone 12 Pro Max 128Gb","iPhone 12 Pro 512Gb","iPhone 12 Pro 256Gb","iPhone 12 Pro 128Gb","iPhone 12 256Gb","iPhone 12 128Gb","iPhone 12 64Gb","iPhone 12 Mini 256Gb","iPhone 12 Mini 128Gb","iPhone 12 Mini 64Gb","iPhone 11 Pro Max 256Gb","iPhone 11 Pro Max 512Gb","iPhone 11 Pro Max 64Gb","iPhone 11 Pro 256Gb","iPhone 11 Pro 512Gb","iPhone 11 Pro 64Gb","iPhone 11 128Gb","iPhone 11 256Gb","iPhone 11 64Gb","iPhone SE 2020 256Gb","iPhone SE 2020 128Gb","iPhone SE 2020 64Gb","iPhone Xs Max 256Gb","iPhone Xs Max 512Gb","iPhone Xs Max 64Gb","iPhone Xs 256Gb","iPhone Xs 512Gb","iPhone Xs 64Gb","iPhone X 256Gb","iPhone X 64Gb","iPhone Xr 128Gb","iPhone Xr 256Gb","iPhone Xr 64Gb","iPhone 8 plus 256Gb","iPhone 8 plus 64Gb","iPhone 8 256Gb","iPhone 8 64Gb","iPhone 7 plus 256Gb","iPhone 7 plus 128Gb","iPhone 7 plus 32Gb","iPhone 7 256Gb","iPhone 7 128Gb","iPhone 7 32Gb","iPhone 6s plus 128Gb","iPhone 6s plus 64Gb","iPhone 6s plus 32Gb","iPhone 6s plus 16Gb","iPhone 6s 128Gb","iPhone 6s 64Gb","iPhone 6s 32Gb","iPhone 6s 16Gb","iPhone 6 plus 128Gb","iPhone 6 plus 64Gb","iPhone 6 plus 16Gb","iPhone 6 128Gb","iPhone 6 64Gb","iPhone 6 32Gb","iPhone 6 16Gb","iPhone SE 128Gb","iPhone SE 64Gb","iPhone SE 32Gb","iPhone SE 16Gb","iPhone 5s 16Gb","iPhone 5s 32Gb","iPhone 5s 64Gb","iPhone 5c 32Gb","iPhone 5c 16Gb","iPhone 5c 8Gb","iPhone 5 16Gb","iPhone 5 32Gb","iPhone 5 64Gb"]}));
-    </script>
-
-    <script src="js/common.js"></script>
-    <script src="js/calc.js"></script>
-
-    <script>
-      TradeinCalculator.init("#tradeinCalculator", {
-        token: "f40cc2ac-f9f5-4030-b6c3-1dc4e5a5e68b", // for test a8dcef1d-f5eb-48b3-87dc-12ce51bee2fe
-        lang: "ru", // ru, ua
-        mode: "prod" // test, prod
-      });
-
-      /* Methods
-            TradeinCalculator.getProductName();
-            TradeinCalculator.getDeviceId();
-            TradeinCalculator.getDeviceCurrency();
-            TradeinCalculator.getDevicePrice();
-        */
-    </script>
   </body>
 </html>

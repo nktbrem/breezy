@@ -1,0 +1,111 @@
+.process {
+
+  &__container {
+    max-width: 1200px;
+    padding: 0 36px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding-bottom: 120px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 90px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: $clr_secondary;
+    margin-bottom: 56px;
+  }
+
+  .video {
+    max-width: 936px;
+    margin: 0 auto;
+
+    &__container {
+      position: relative;
+      height: 0;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    &__iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__thumbnail {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+      position: absolute;
+    }
+
+    &__button {
+      opacity: 1;
+      width: 72px;
+      height: 72px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.25);
+      }
+
+    }
+
+    &-active {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    &__title {
+      line-height: 62px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+
+    &__container {
+      padding: 0 16px;
+    }
+
+    &__content {
+      padding-bottom: 60px;
+    }
+
+    &__title {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 16px;
+    }
+
+    &__description {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 32px;
+    }
+    .video {
+      &__button {
+        width: 56px;
+        height: 56px;
+      }
+    }
+  }
+}
